@@ -90,11 +90,11 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <Card key={index} className="glass-card hover-lift group overflow-hidden">
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-primary overflow-hidden">
+              <div className="relative h-40 sm:h-48 bg-gradient-primary overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <project.icon className="h-16 w-16 text-white opacity-80" />
@@ -130,7 +130,7 @@ const Projects = () => {
                 </div>
 
                 {/* Project Links */}
-                <div className="flex space-x-3 pt-4">
+                <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 pt-4">
                   {project.links.live && (
                     <Button
                       variant="outline"
@@ -158,13 +158,13 @@ const Projects = () => {
         </div>
 
         {/* Project Stats */}
-        <div className="mt-16">
+        <div className="mt-10 sm:mt-16">
           <Card className="glass-card">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-8">
               <h3 className="text-2xl font-semibold text-gradient text-center mb-8">
                 Project Statistics
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-gradient mb-2">8+</div>
                   <div className="text-muted-foreground">Active Projects</div>
@@ -187,9 +187,9 @@ const Projects = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <Card className="glass-card max-w-2xl mx-auto">
-            <CardContent className="p-8">
+        <div className="text-center mt-10 sm:mt-16">
+          <Card className="glass-card max-w-full sm:max-w-2xl mx-auto">
+            <CardContent className="p-4 sm:p-8">
               <h3 className="text-2xl font-semibold text-gradient mb-4">
                 Interested in Collaboration?
               </h3>

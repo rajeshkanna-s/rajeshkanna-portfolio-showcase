@@ -28,19 +28,19 @@ const About = () => {
   return (
     <section id="about" className="section-padding bg-gradient-to-b from-background to-accent/30">
       <div className="section-container">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Side - Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-bold text-gradient">
+          <div className="space-y-6 md:space-y-8 animate-fade-in">
+            <div className="space-y-2 md:space-y-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient">
                 About Me
               </h2>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-lg sm:text-xl text-muted-foreground">
                 Transforming ideas into powerful digital solutions
               </p>
             </div>
 
-            <div className="space-y-6 text-lg leading-relaxed text-foreground">
+            <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed text-foreground">
               <p>
                 I'm a dedicated and highly skilled Software Engineer with over{' '}
                 <span className="font-semibold text-primary">8+ years of experience</span>{' '}
@@ -64,7 +64,7 @@ const About = () => {
             </div>
 
             {/* Key Stats */}
-            <div className="grid grid-cols-2 gap-6 pt-6">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-4 sm:pt-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-gradient">8+</div>
                 <div className="text-muted-foreground">Years Experience</div>
@@ -77,11 +77,11 @@ const About = () => {
           </div>
 
           {/* Right Side - Highlights */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {highlights.map((highlight, index) => (
               <Card key={index} className="glass-card hover-lift">
-                <CardContent className="p-6">
-                  <div className="flex items-start space-x-4">
+                <CardContent className="p-4 sm:p-6">
+                  <div className="flex items-start space-x-3 sm:space-x-4">
                     <div className="p-3 bg-gradient-primary rounded-full">
                       <highlight.icon className="h-6 w-6 text-white" />
                     </div>

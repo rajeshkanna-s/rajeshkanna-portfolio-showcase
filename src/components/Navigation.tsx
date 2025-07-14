@@ -39,17 +39,17 @@ const Navigation = () => {
         : 'bg-transparent'
     }`}>
       <div className="section-container">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 sm:py-4 px-2 sm:px-0">
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-2xl font-bold text-gradient hover:scale-105 transition-transform"
+            className="text-xl sm:text-2xl font-bold text-gradient hover:scale-105 transition-transform"
           >
             Rajeshkanna S
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -71,7 +71,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className="md:hidden p-2 text-foreground text-xl"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -79,8 +79,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-border shadow-medium">
-            <div className="py-4 space-y-2">
+          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-border shadow-medium z-50">
+            <div className="py-3 space-y-2">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -90,7 +90,7 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="px-4 py-2">
+              <div className="px-2 py-2">
                 <Button
                   onClick={() => scrollToSection('contact')}
                   className="w-full bg-gradient-primary"

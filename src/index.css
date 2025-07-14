@@ -4,6 +4,36 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  @apply bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-950 dark:to-pink-900 overflow-x-hidden w-full min-w-0 min-h-screen;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100vw;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+.section-container {
+  @apply w-full min-w-0 px-0 sm:px-6 lg:px-8;
+}
+
+.section-padding {
+  @apply w-full min-w-0 py-12 sm:py-16 lg:py-24;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 /* Professional Pink & Blue Theme Design System */
 @layer base {
   :root {

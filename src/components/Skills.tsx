@@ -80,27 +80,27 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {skillCategories.map((category, index) => (
             <Card key={index} className="glass-card hover-lift">
               <CardHeader>
-                <CardTitle className="flex items-center space-x-3 text-xl">
-                  <div className="p-2 bg-gradient-primary rounded-lg">
+                <CardTitle className="flex items-center space-x-2 sm:space-x-3 text-lg sm:text-xl">
+                  <div className="p-1.5 sm:p-2 bg-gradient-primary rounded-lg">
                     <category.icon className="h-5 w-5 text-white" />
                   </div>
                   <span className="text-foreground">{category.title}</span>
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-4 sm:space-y-6">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-2">
+                  <div key={skillIndex} className="space-y-1 sm:space-y-2">
                     <div className="flex justify-between items-center">
-                      <span className="font-medium text-foreground">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground">{skill.level}%</span>
+                      <span className="font-medium text-foreground text-sm sm:text-base">{skill.name}</span>
+                      <span className="text-xs sm:text-sm text-muted-foreground">{skill.level}%</span>
                     </div>
-                    <div className="skill-bar">
+                    <div className="skill-bar h-2 rounded bg-gray-200 overflow-hidden">
                       <div
-                        className={`skill-progress ${isVisible ? 'w-full' : 'w-0'}`}
+                        className={`skill-progress bg-gradient-primary h-2 rounded ${isVisible ? 'w-full' : 'w-0'}`}
                         style={{
                           width: isVisible ? `${skill.level}%` : '0%',
                           transitionDelay: `${skillIndex * 100}ms`
@@ -115,9 +115,9 @@ const Skills = () => {
         </div>
 
         {/* Additional Skills */}
-        <div className="mt-16 text-center">
+        <div className="mt-10 sm:mt-16 text-center">
           <h3 className="text-2xl font-semibold text-foreground mb-6">Additional Expertise</h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {[
               'API Integration', 'Payment Processing', 'KYC Compliance', 'Data Structures & Algorithms',
               'Microservices', 'Technical Support', 'System Integration', 'Software Architecture',

@@ -52,20 +52,20 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <Card key={index} className="glass-card hover-lift">
               <CardContent className="p-8">
-                <div className="grid lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
                   {/* Left - Company Info */}
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="flex items-center space-x-2 sm:space-x-3">
                       <div className="p-2 bg-gradient-primary rounded-lg">
                         <Briefcase className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-foreground">{exp.title}</h3>
-                        <p className="text-lg font-semibold text-primary">{exp.company}</p>
+                        <h3 className="text-lg sm:text-xl font-bold text-foreground">{exp.title}</h3>
+                        <p className="text-base sm:text-lg font-semibold text-primary">{exp.company}</p>
                       </div>
                     </div>
                     
-                    <div className="space-y-2 text-muted-foreground">
+                    <div className="space-y-1 sm:space-y-2 text-muted-foreground">
                       <div className="flex items-center space-x-2">
                         <Calendar className="h-4 w-4" />
                         <span>{exp.period}</span>
@@ -76,30 +76,30 @@ const Experience = () => {
                       </div>
                     </div>
 
-                    <div className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full">
+                    <div className="inline-block px-2 py-1 bg-secondary/10 text-secondary text-xs sm:text-sm font-medium rounded-full">
                       {exp.type}
                     </div>
                   </div>
 
                   {/* Right - Description */}
-                  <div className="lg:col-span-2 space-y-6">
-                    <ul className="space-y-3">
+                  <div className="lg:col-span-2 space-y-4 sm:space-y-6 mt-4 lg:mt-0">
+                    <ul className="space-y-2 sm:space-y-3">
                       {exp.description.map((item, idx) => (
                         <li key={idx} className="flex items-start space-x-3">
                           <div className="w-2 h-2 bg-gradient-primary rounded-full mt-3 flex-shrink-0"></div>
-                          <span className="text-foreground leading-relaxed">{item}</span>
+                          <span className="text-foreground text-sm sm:text-base leading-relaxed">{item}</span>
                         </li>
                       ))}
                     </ul>
 
                     {/* Technologies */}
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Key Technologies:</h4>
-                      <div className="flex flex-wrap gap-2">
+                      <h4 className="font-semibold text-foreground mb-2 sm:mb-3">Key Technologies:</h4>
+                      <div className="flex flex-wrap gap-1 sm:gap-2">
                         {exp.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full"
+                            className="px-2 py-1 bg-primary/10 text-primary text-xs sm:text-sm font-medium rounded-full"
                           >
                             {tech}
                           </span>

@@ -15,15 +15,15 @@ const Footer = () => {
       
       <div className="section-container relative z-10">
         <div className="py-12">
-          <div className="grid md:grid-cols-3 gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center text-center">
             {/* Left - Brand */}
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left mb-4 md:mb-0">
               <h3 className="text-2xl font-bold mb-2">Rajeshkanna S</h3>
               <p className="text-white/80">Software Engineer</p>
             </div>
 
             {/* Center - Links */}
-            <div className="text-center">
+            <div className="text-center mb-4 md:mb-0">
               <div className="flex flex-wrap justify-center gap-6">
                 <button
                   onClick={() => {
@@ -74,7 +74,7 @@ const Footer = () => {
             </div>
 
             {/* Right - Scroll to Top */}
-            <div className="text-center md:text-right">
+            <div className="text-center md:text-right mb-2 md:mb-0">
               <Button
                 onClick={scrollToTop}
                 variant="outline"

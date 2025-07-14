@@ -172,16 +172,16 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Form */}
-          <Card className="glass-card">
+          <Card className="glass-card w-full">
             <CardHeader>
               <CardTitle className="text-2xl text-gradient">Send a Message</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-4 sm:p-6">
               <form onSubmit={handleSubmit} className="space-y-6">
                 <input type="hidden" name="title" value="Contact Us" />
-                <div className="grid md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Name *
@@ -261,7 +261,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-primary hover:shadow-medium transition-all duration-300"
+                  className="w-full bg-gradient-primary hover:shadow-medium transition-all duration-300 text-base sm:text-lg"
                   size="lg"
                 >
                   {isSubmitting ? (
@@ -278,13 +278,13 @@ const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8 w-full">
             {/* Contact Details */}
-            <Card className="glass-card">
+            <Card className="glass-card w-full">
               <CardHeader>
                 <CardTitle className="text-2xl text-gradient">Get In Touch</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
+              <CardContent className="space-y-4 sm:space-y-6">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center space-x-4">
                     <div className="p-3 bg-gradient-primary rounded-full">
@@ -311,12 +311,12 @@ const Contact = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="glass-card">
+            <Card className="glass-card w-full">
               <CardHeader>
                 <CardTitle className="text-2xl text-gradient">Follow Me</CardTitle>
               </CardHeader>
-              <CardContent>
-                <div className="flex space-x-4">
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
                   {socialLinks.map((social, index) => (
                     <a
                       key={index}
@@ -337,8 +337,8 @@ const Contact = () => {
             </Card>
 
             {/* Availability */}
-            <Card className="glass-card">
-              <CardContent className="p-6">
+            <Card className="glass-card w-full">
+              <CardContent className="p-4 sm:p-6">
                 <div className="text-center">
                   <div className="w-3 h-3 bg-green-500 rounded-full mx-auto mb-3 animate-pulse"></div>
                   <h3 className="font-semibold text-foreground mb-2">Available for Projects</h3>
@@ -352,9 +352,9 @@ const Contact = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
-          <Card className="glass-card max-w-3xl mx-auto">
-            <CardContent className="p-8">
+        <div className="text-center mt-10 sm:mt-16">
+          <Card className="glass-card max-w-full sm:max-w-3xl mx-auto">
+            <CardContent className="p-4 sm:p-8">
               <h3 className="text-2xl font-semibold text-gradient mb-4">
                 Ready to Start Your Project?
               </h3>
