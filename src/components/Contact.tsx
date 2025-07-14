@@ -15,6 +15,13 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [attemptedSubmit, setAttemptedSubmit] = useState(false);
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -43,18 +50,34 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Validate all fields
-    if (!validateName(formData.name) || !validateEmail(formData.email) || 
-        !validateSubject(formData.subject) || !validateMessage(formData.message)) {
+    setAttemptedSubmit(true);
+    const newErrors = {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    };
+    if (!validateName(formData.name)) {
+      newErrors.name = 'Name must be 3-25 letters and spaces only.';
+    }
+    if (!validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email address.';
+    }
+    if (!validateSubject(formData.subject)) {
+      newErrors.subject = 'Subject must be 10-100 characters.';
+    }
+    if (!validateMessage(formData.message)) {
+      newErrors.message = 'Message must be 25-500 characters.';
+    }
+    setErrors(newErrors);
+    if (Object.values(newErrors).some(Boolean)) {
       toast({
         title: "Validation Error",
-        description: "Please check all fields and try again.",
+        description: "Please check the highlighted fields and try again.",
         variant: "destructive",
       });
       return;
     }
-
     setIsSubmitting(true);
 
     try {
@@ -75,6 +98,8 @@ const Contact = () => {
         subject: '',
         message: ''
       });
+      setErrors({ name: '', email: '', subject: '', message: '' });
+      setAttemptedSubmit(false);
     } catch (error) {
       toast({
         title: "Error",
@@ -97,8 +122,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+91 8667454755',
-      link: 'tel:+918667454755'
+      content: '+91 8667454***',
+      link: 'tel:+918667454***'
     },
     {
       icon: MapPin,
@@ -155,6 +180,7 @@ const Contact = () => {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="hidden" name="title" value="Contact Us" />
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
@@ -170,6 +196,9 @@ const Contact = () => {
                       required
                       className="w-full"
                     />
+                    {attemptedSubmit && errors.name && (
+                      <p className="text-red-500 text-xs mt-1">{errors.name}</p>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
@@ -185,6 +214,9 @@ const Contact = () => {
                       required
                       className="w-full"
                     />
+                    {attemptedSubmit && errors.email && (
+                      <p className="text-red-500 text-xs mt-1">{errors.email}</p>
+                    )}
                   </div>
                 </div>
 
@@ -202,6 +234,9 @@ const Contact = () => {
                     required
                     className="w-full"
                   />
+                  {attemptedSubmit && errors.subject && (
+                    <p className="text-red-500 text-xs mt-1">{errors.subject}</p>
+                  )}
                 </div>
 
                 <div>
@@ -218,6 +253,9 @@ const Contact = () => {
                     required
                     className="w-full resize-none"
                   />
+                  {attemptedSubmit && errors.message && (
+                    <p className="text-red-500 text-xs mt-1">{errors.message}</p>
+                  )}
                 </div>
 
                 <Button

@@ -23,10 +23,7 @@ const Hero = () => {
                 Hello, I'm
               </p>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-                Rajeshkanna
-                <span className="block text-transparent bg-gradient-to-r from-pink-200 to-pink-100 bg-clip-text">
-                  S
-                </span>
+                Rajeshkanna S
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-pink-600 dark:text-pink-300">
                 Software Engineer
@@ -83,7 +80,7 @@ const Hero = () => {
                 <Mail className="h-6 w-6" />
               </a>
               <a
-                href="tel:8667454755"
+                href="tel:8667454***"
                 className="p-3 bg-pink-100 dark:bg-pink-800 rounded-full hover:bg-pink-200 dark:hover:bg-pink-700 transition-all duration-300 hover:scale-110 text-pink-600 dark:text-pink-300"
               >
                 <Phone className="h-6 w-6" />

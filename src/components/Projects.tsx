@@ -8,7 +8,7 @@ const Projects = () => {
       title: 'ParkingMate',
       description: 'A smart parking management system that helps users find and book parking spaces efficiently with real-time availability tracking.',
       image: '/lovable-uploads/695adda5-88b5-4d83-96d8-f1e0edb09b97.png',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Real-time APIs', 'Location Services'],
+      technologies: ['React', 'Node.js', 'supabase', 'Real-time APIs'],
       category: 'Web Application',
       links: {
         live: 'https://parkingmate.netlify.app/',
@@ -20,8 +20,8 @@ const Projects = () => {
       title: 'ZezhaTools Web Platform',
       description: 'A comprehensive web platform featuring multiple utility tools and calculators for various business and personal needs.',
       image: '/lovable-uploads/5809ae62-f158-4e0d-bf2a-39e3d7653b10.png',
-      technologies: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'REST APIs'],
-      category: 'Full-Stack Development',
+      technologies: ['React', 'Node.js', 'supabase', 'Real-time APIs'],
+      category: 'Web Application',
       links: {
         live: 'https://zezhatools.com/',
         github: 'https://github.com/rajeshkanna-s'
@@ -32,10 +32,10 @@ const Projects = () => {
       title: 'AI Text Bot',
       description: 'An intelligent chatbot application built with modern AI technologies for natural language processing and conversation management.',
       image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
-      technologies: ['JavaScript', 'AI/ML', 'Natural Language Processing', 'REST APIs'],
-      category: 'AI & Machine Learning',
+      technologies: ['JavaScript', 'AI/ML', 'REST APIs'],
+      category: 'Web Application',
       links: {
-        live: '#',
+        live: 'https://zezhatools.com/chat-bot',
         github: 'https://github.com/rajeshkanna-s'
       },
       icon: Bot
@@ -44,10 +44,10 @@ const Projects = () => {
       title: 'EMI Calculator',
       description: 'A comprehensive EMI calculation tool for loans and mortgages with advanced features for financial planning and analysis.',
       image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
-      technologies: ['JavaScript', 'HTML5', 'CSS3', 'Financial Algorithms'],
+      technologies: ['TypeScript', 'HTML5', 'CSS3', 'Financial Algorithms'],
       category: 'Financial Tools',
       links: {
-        live: '#',
+        live: 'https://zezhatools.com/loan-calculator',
         github: 'https://github.com/rajeshkanna-s'
       },
       icon: Calculator
@@ -56,7 +56,7 @@ const Projects = () => {
       title: 'JSON Viewer',
       description: 'A powerful JSON visualization and formatting tool with syntax highlighting, validation, and tree view capabilities.',
       image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
-      technologies: ['JavaScript', 'JSON Processing', 'Web APIs', 'Data Visualization'],
+      technologies: ['TypeScript', 'JSON Processing', 'Web APIs', 'Data Visualization'],
       category: 'Developer Tools',
       links: {
         live: '#',
@@ -65,13 +65,13 @@ const Projects = () => {
       icon: Code2
     },
     {
-      title: 'Advanced Calculator Suite',
+      title: 'TAX Calculator Compare',
       description: 'A collection of specialized calculators including scientific, financial, and statistical calculation tools.',
       image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
-      technologies: ['JavaScript', 'Mathematical Libraries', 'Responsive Design', 'PWA'],
+      technologies: ['TypeScript', 'Mathematical Libraries', 'Responsive Design', 'PWA'],
       category: 'Utility Applications',
       links: {
-        live: '#',
+        live: 'https://zezhatools.com/taxcompare-calculator',
         github: 'https://github.com/rajeshkanna-s'
       },
       icon: Calculator
