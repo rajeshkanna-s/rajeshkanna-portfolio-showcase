@@ -10,29 +10,29 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-hero">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-950 dark:to-pink-900">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-white/5 opacity-50"></div>
       
       <div className="section-container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Side - Content */}
-          <div className="text-white space-y-8 animate-fade-in">
+          <div className="text-gray-800 dark:text-white space-y-8 animate-fade-in">
             <div className="space-y-4">
               <p className="text-lg md:text-xl font-medium opacity-90">
                 Hello, I'm
               </p>
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                 Rajeshkanna
-                <span className="block text-transparent bg-gradient-to-r from-pink-200 to-blue-200 bg-clip-text">
+                <span className="block text-transparent bg-gradient-to-r from-pink-200 to-pink-100 bg-clip-text">
                   S
                 </span>
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-pink-200">
+              <h2 className="text-2xl md:text-3xl font-semibold text-pink-600 dark:text-pink-300">
                 Software Engineer
               </h2>
               <p className="text-lg md:text-xl opacity-90 max-w-xl leading-relaxed">
-                Passionate Software Engineer with 6+ years of experience in full-stack development, 
+                Passionate Software Engineer with 8+ years of experience in full-stack development, 
                 API integration, and technical support. Specialized in Java, Spring Boot, and modern web technologies.
               </p>
             </div>
@@ -50,7 +50,7 @@ const Hero = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300"
+                className="border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white dark:border-pink-300 dark:text-pink-300 dark:hover:bg-pink-300 dark:hover:text-gray-900 transition-all duration-300"
                 onClick={() => window.open('https://drive.google.com/uc?export=download&id=17F81SgzsZ-7pKuZnxijNL64vo0uZp2mc', '_blank')}
               >
                 <Download className="mr-2 h-5 w-5" />
@@ -64,7 +64,7 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/rajeshkanna-s"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className="p-3 bg-pink-100 dark:bg-pink-800 rounded-full hover:bg-pink-200 dark:hover:bg-pink-700 transition-all duration-300 hover:scale-110 text-pink-600 dark:text-pink-300"
               >
                 <Linkedin className="h-6 w-6" />
               </a>
@@ -72,19 +72,19 @@ const Hero = () => {
                 href="https://github.com/rajeshkanna-s"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className="p-3 bg-pink-100 dark:bg-pink-800 rounded-full hover:bg-pink-200 dark:hover:bg-pink-700 transition-all duration-300 hover:scale-110 text-pink-600 dark:text-pink-300"
               >
                 <Github className="h-6 w-6" />
               </a>
               <a
                 href="mailto:rajeshkannaprogrammer@gmail.com"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className="p-3 bg-pink-100 dark:bg-pink-800 rounded-full hover:bg-pink-200 dark:hover:bg-pink-700 transition-all duration-300 hover:scale-110 text-pink-600 dark:text-pink-300"
               >
                 <Mail className="h-6 w-6" />
               </a>
               <a
                 href="tel:8667454755"
-                className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                className="p-3 bg-pink-100 dark:bg-pink-800 rounded-full hover:bg-pink-200 dark:hover:bg-pink-700 transition-all duration-300 hover:scale-110 text-pink-600 dark:text-pink-300"
               >
                 <Phone className="h-6 w-6" />
               </a>
@@ -94,9 +94,9 @@ const Hero = () => {
           {/* Right Side - Image/Animation */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 bg-white/10 rounded-full flex items-center justify-center animate-pulse-soft">
-                <div className="w-64 h-64 md:w-80 md:h-80 bg-white/20 rounded-full flex items-center justify-center">
-                  <div className="text-6xl md:text-8xl font-bold text-white/80">
+              <div className="w-80 h-80 md:w-96 md:h-96 bg-pink-200/30 dark:bg-pink-800/30 rounded-full flex items-center justify-center animate-pulse-soft">
+                <div className="w-64 h-64 md:w-80 md:h-80 bg-pink-300/40 dark:bg-pink-700/40 rounded-full flex items-center justify-center">
+                  <div className="text-6xl md:text-8xl font-bold text-pink-600 dark:text-pink-200">
                     RS
                   </div>
                 </div>
@@ -114,7 +114,7 @@ const Hero = () => {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <button
           onClick={() => scrollToSection('about')}
-          className="text-white opacity-70 hover:opacity-100 transition-opacity"
+          className="text-pink-600 dark:text-pink-300 opacity-70 hover:opacity-100 transition-opacity"
         >
           <ArrowDown className="h-6 w-6" />
         </button>

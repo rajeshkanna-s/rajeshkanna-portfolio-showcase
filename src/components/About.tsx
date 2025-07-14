@@ -5,7 +5,7 @@ const About = () => {
   const highlights = [
     {
       icon: Code,
-      title: '6+ Years Experience',
+      title: '8+ Years Experience',
       description: 'Professional software development experience',
     },
     {
@@ -43,7 +43,7 @@ const About = () => {
             <div className="space-y-6 text-lg leading-relaxed text-foreground">
               <p>
                 I'm a dedicated and highly skilled Software Engineer with over{' '}
-                <span className="font-semibold text-primary">6+ years of experience</span>{' '}
+                <span className="font-semibold text-primary">8+ years of experience</span>{' '}
                 as a specialized developer. My expertise spans across API development, 
                 product innovation, loan processing, KYC compliance, and web application development.
               </p>
@@ -66,7 +66,7 @@ const About = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-2 gap-6 pt-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-gradient">6+</div>
+                <div className="text-3xl font-bold text-gradient">8+</div>
                 <div className="text-muted-foreground">Years Experience</div>
               </div>
               <div className="text-center">

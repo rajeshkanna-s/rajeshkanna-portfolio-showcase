@@ -24,31 +24,65 @@ const Contact = () => {
     }));
   };
 
+  const validateName = (input: string) => {
+    return /^[A-Za-z\s]+$/.test(input) && input.length >= 3 && input.length <= 25;
+  };
+
+  const validateEmail = (input: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input);
+  };
+
+  const validateSubject = (input: string) => {
+    return input.length >= 10 && input.length <= 100;
+  };
+
+  const validateMessage = (input: string) => {
+    return input.length >= 25 && input.length <= 500;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate all fields
+    if (!validateName(formData.name) || !validateEmail(formData.email) || 
+        !validateSubject(formData.subject) || !validateMessage(formData.message)) {
+      toast({
+        title: "Validation Error",
+        description: "Please check all fields and try again.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!",
-      });
+      // Using EmailJS
+      const emailjs = (window as any).emailjs;
+      if (emailjs) {
+        await emailjs.sendForm("service_5eim7li", "template_jij3tij", e.target);
+        
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for your message. I'll get back to you soon!",
+        });
 
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        throw new Error("EmailJS not loaded");
+      }
     } catch (error) {
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
+      console.error("EmailJS error:", error);
     } finally {
       setIsSubmitting(false);
     }

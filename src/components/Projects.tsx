@@ -5,6 +5,30 @@ import { Button } from '@/components/ui/button';
 const Projects = () => {
   const projects = [
     {
+      title: 'ParkingMate',
+      description: 'A smart parking management system that helps users find and book parking spaces efficiently with real-time availability tracking.',
+      image: '/lovable-uploads/695adda5-88b5-4d83-96d8-f1e0edb09b97.png',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Real-time APIs', 'Location Services'],
+      category: 'Web Application',
+      links: {
+        live: 'https://parkingmate.netlify.app/',
+        github: 'https://github.com/rajeshkanna-s'
+      },
+      icon: Bot
+    },
+    {
+      title: 'ZezhaTools Web Platform',
+      description: 'A comprehensive web platform featuring multiple utility tools and calculators for various business and personal needs.',
+      image: '/lovable-uploads/5809ae62-f158-4e0d-bf2a-39e3d7653b10.png',
+      technologies: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'REST APIs'],
+      category: 'Full-Stack Development',
+      links: {
+        live: 'https://zezhatools.com/',
+        github: 'https://github.com/rajeshkanna-s'
+      },
+      icon: Globe
+    },
+    {
       title: 'AI Text Bot',
       description: 'An intelligent chatbot application built with modern AI technologies for natural language processing and conversation management.',
       image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
@@ -41,35 +65,11 @@ const Projects = () => {
       icon: Code2
     },
     {
-      title: 'ZezhaTools Web Platform',
-      description: 'A comprehensive web platform featuring multiple utility tools and calculators for various business and personal needs.',
-      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
-      technologies: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'REST APIs'],
-      category: 'Full-Stack Development',
-      links: {
-        live: 'https://www.zezhatools.com',
-        github: 'https://github.com/rajeshkanna-s'
-      },
-      icon: Globe
-    },
-    {
       title: 'Advanced Calculator Suite',
       description: 'A collection of specialized calculators including scientific, financial, and statistical calculation tools.',
       image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
       technologies: ['JavaScript', 'Mathematical Libraries', 'Responsive Design', 'PWA'],
       category: 'Utility Applications',
-      links: {
-        live: '#',
-        github: 'https://github.com/rajeshkanna-s'
-      },
-      icon: Calculator
-    },
-    {
-      title: 'Tax Calculator',
-      description: 'An intelligent tax calculation system with support for multiple tax regimes and automated compliance checking.',
-      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
-      technologies: ['JavaScript', 'Tax Algorithms', 'Form Validation', 'Chart.js'],
-      category: 'Financial Tools',
       links: {
         live: '#',
         github: 'https://github.com/rajeshkanna-s'
@@ -166,7 +166,7 @@ const Projects = () => {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">6+</div>
+                  <div className="text-3xl font-bold text-gradient mb-2">8+</div>
                   <div className="text-muted-foreground">Active Projects</div>
                 </div>
                 <div className="text-center">
