@@ -19,11 +19,11 @@ const Hero = () => {
           {/* Left Side - Content */}
           <div className="text-gray-800 dark:text-white space-y-6 md:space-y-8 animate-fade-in mt-10 sm:mt-16">
             <div className="space-y-2 md:space-y-4">
-              <p className="text-base sm:text-lg md:text-xl font-medium opacity-90">
+              {/* <p className="text-base sm:text-lg md:text-xl font-medium opacity-90">
                 Hello, I'm
-              </p>
+              </p> */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
-                Rajeshkanna S
+                Rajeshkanna,
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-pink-600 dark:text-pink-300">
                 Software Engineer
