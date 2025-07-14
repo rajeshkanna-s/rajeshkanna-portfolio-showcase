@@ -19,9 +19,9 @@ const Hero = () => {
           {/* Left Side - Content */}
           <div className="text-gray-800 dark:text-white space-y-6 md:space-y-8 animate-fade-in">
             <div className="space-y-2 md:space-y-4">
-              <p className="text-base sm:text-lg md:text-xl font-medium opacity-90">
+              {/* <p className="text-base sm:text-lg md:text-xl font-medium opacity-90">
                 Hello, I'm
-              </p>
+              </p> */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                 Rajeshkanna S
               </h1>
