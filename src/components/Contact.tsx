@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -57,25 +58,23 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      // Initialize EmailJS if not already done
+      emailjs.init("yeIOTD4_n_jgpIkBo");
+      
       // Using EmailJS
-      const emailjs = (window as any).emailjs;
-      if (emailjs) {
-        await emailjs.sendForm("service_5eim7li", "template_jij3tij", e.target);
-        
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for your message. I'll get back to you soon!",
-        });
+      await emailjs.sendForm("service_5eim7li", "template_jij3tij", e.target as HTMLFormElement);
+      
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon!",
+      });
 
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-      } else {
-        throw new Error("EmailJS not loaded");
-      }
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      });
     } catch (error) {
       toast({
         title: "Error",

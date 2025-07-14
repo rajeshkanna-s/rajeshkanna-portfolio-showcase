@@ -1,191 +1,223 @@
-import { Award, Star, Trophy, FileText } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Award } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
-const Achievements = () => {
-  const achievements = [
+const Certificates = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const certificates = [
     {
-      icon: Star,
-      title: 'STAR PERFORMER Award',
-      organization: 'Kuwy Technology Service Pvt Ltd',
-      description: 'Recognized for outstanding support performance and exceptional contribution to team success.',
-      year: '2023',
-      category: 'Performance Excellence'
+      title: 'Building High Performance Teams',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Building+HighPerformance+Teams-1.jpg'
     },
     {
-      icon: FileText,
-      title: 'Software Competition Winner',
-      organization: 'Industry Recognition',
-      description: 'Successfully implemented and defined over 20 business metrics along with 30+ years of combined experience.',
-      year: '2022',
-      category: 'Technical Innovation'
+      title: 'Building Professional Relationships',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Building+Professional+Relationships-1.jpg'
     },
     {
-      icon: Trophy,
-      title: 'Process Improvement Leader',
-      organization: 'Barclays Shared Services',
-      description: 'Demonstrated a proven track record of successfully completing numerous projects and streamlining business processes.',
-      year: '2019',
-      category: 'Process Excellence'
+      title: 'Building Self Confidence',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Building+SelfConfidence-1.jpg'
     },
     {
-      icon: Award,
-      title: 'Technical Proficiency Recognition',
-      organization: 'Multiple Platforms',
-      description: 'Earned recognition for successfully implementing various software metrics and maintaining high-quality standards.',
-      year: '2021',
-      category: 'Technical Skills'
+      title: 'Communicating with Confidence',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Communicating+with+Confidence-1.jpg'
+    },
+    {
+      title: 'Corporate Finance Foundations',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Corporate+Finance+Foundations-1.jpg'
+    },
+    {
+      title: 'Creating a Career Plan',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Creating+a+Career+Plan-1.jpg'
+    },
+    {
+      title: 'Customer Service Leadership',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Customer+Service+Leadership+(1)-1.jpg'
+    },
+    {
+      title: 'Customer Service Leadership (Advanced)',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Customer+Service+Leadership-1.jpg'
+    },
+    {
+      title: 'Excel Advanced Formulas and Functions',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Excel+Advanced+Formulas+and+Functions-1.jpg'
+    },
+    {
+      title: 'Financial Modeling Foundations',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Financial+Modeling+Foundations+(1)-1.jpg'
+    },
+    {
+      title: 'Financial Modeling Foundations (Advanced)',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Financial+Modeling+Foundations-1.jpg'
+    },
+    {
+      title: 'Happiness Tips',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Happiness+Tips-1.jpg'
+    },
+    {
+      title: 'Improving Your Leadership Communications',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Improving+Your+Leadership+Communications-1.jpg'
+    },
+    {
+      title: 'Microsoft Project 2019 and Project Online Desktop Essential Training',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Microsoft+Project+2019+and+Project+Online+Desktop+Essential+Training-1.jpg'
+    },
+    {
+      title: 'Strategic Thinking',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Strategic+Thinking-1.jpg'
+    },
+    {
+      title: 'The Human Resources Hero',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_The+Human+Resources+Hero+(1)-1.jpg'
+    },
+    {
+      title: 'Professional Certification',
+      url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/Rajeshkanna_S_certficate_250920171316-1.jpg'
     }
   ];
 
-  const certifications = [
-    'Java Programming Certification',
-    'Spring Framework Certification',
-    'RESTful API Development',
-    'Database Management Systems',
-    'Agile Development Methodologies',
-    'Software Testing & Quality Assurance'
-  ];
+  // Auto advance slides
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % certificates.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [certificates.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % certificates.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + certificates.length) % certificates.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
-    <section id="achievements" className="section-padding bg-muted/30">
+    <section id="certificates" className="section-padding bg-muted/30">
       <div className="section-container">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-            Achievements & Recognition
+            Certificate Completions
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Professional accomplishments and certifications that demonstrate my commitment to excellence
+            Professional development and continuous learning achievements
           </p>
         </div>
 
-        {/* Main Achievements */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {achievements.map((achievement, index) => (
-            <Card key={index} className="glass-card hover-lift">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-gradient-primary rounded-full flex-shrink-0">
-                    <achievement.icon className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-xl font-semibold text-foreground">
-                        {achievement.title}
-                      </h3>
-                      <span className="text-sm text-muted-foreground bg-secondary/10 px-2 py-1 rounded-full">
-                        {achievement.year}
-                      </span>
-                    </div>
-                    <p className="text-primary font-medium mb-2">{achievement.organization}</p>
-                    <p className="text-muted-foreground mb-3 leading-relaxed">
-                      {achievement.description}
-                    </p>
-                    <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">
-                      {achievement.category}
-                    </span>
-                  </div>
+        {/* Main Slider */}
+        <div className="relative max-w-4xl mx-auto mb-8">
+          <Card className="glass-card overflow-hidden">
+            <CardContent className="p-0">
+              <div className="relative">
+                <img
+                  src={certificates[currentSlide].url}
+                  alt={certificates[currentSlide].title}
+                  className="w-full h-auto max-h-[600px] object-contain bg-white"
+                  loading="lazy"
+                />
+                
+                {/* Navigation Buttons */}
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90"
+                  onClick={prevSlide}
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </Button>
+                
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/80 backdrop-blur-sm hover:bg-background/90"
+                  onClick={nextSlide}
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </Button>
+
+                {/* Certificate Title Overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+                  <h3 className="text-white text-lg md:text-xl font-semibold">
+                    {certificates[currentSlide].title}
+                  </h3>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Thumbnail Navigation */}
+        <div className="flex justify-center mb-8">
+          <div className="flex space-x-2 overflow-x-auto max-w-full pb-2">
+            {certificates.map((cert, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden border-2 transition-all duration-300 ${
+                  currentSlide === index 
+                    ? 'border-primary shadow-lg scale-110' 
+                    : 'border-muted-foreground/20 hover:border-primary/50'
+                }`}
+              >
+                <img
+                  src={cert.url}
+                  alt={cert.title}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Progress Indicators */}
+        <div className="flex justify-center space-x-2 mb-12">
+          {certificates.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                currentSlide === index 
+                  ? 'bg-primary scale-125' 
+                  : 'bg-muted-foreground/30 hover:bg-primary/50'
+              }`}
+            />
           ))}
         </div>
 
-        {/* Professional Highlights */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {/* Left - Key Accomplishments */}
-          <Card className="glass-card">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold text-gradient mb-6 flex items-center space-x-2">
-                <Trophy className="h-6 w-6" />
-                <span>Key Accomplishments</span>
-              </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-primary rounded-full mt-3 flex-shrink-0"></div>
-                  <span className="text-foreground">
-                    Successfully developed and integrated 50+ RESTful APIs for various business applications
-                  </span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-primary rounded-full mt-3 flex-shrink-0"></div>
-                  <span className="text-foreground">
-                    Improved system performance by 40% through code optimization and database query enhancement
-                  </span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-primary rounded-full mt-3 flex-shrink-0"></div>
-                  <span className="text-foreground">
-                    Led cross-functional teams in delivering critical projects within tight deadlines
-                  </span>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="w-2 h-2 bg-gradient-primary rounded-full mt-3 flex-shrink-0"></div>
-                  <span className="text-foreground">
-                    Mentored junior developers and contributed to team knowledge sharing initiatives
-                  </span>
-                </li>
-              </ul>
-            </CardContent>
-          </Card>
-
-          {/* Right - Certifications */}
-          <Card className="glass-card">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold text-gradient mb-6 flex items-center space-x-2">
-                <FileText className="h-6 w-6" />
-                <span>Certifications & Training</span>
-              </h3>
-              <div className="space-y-3">
-                {certifications.map((cert, index) => (
-                  <div
-                    key={index}
-                    className="flex items-center space-x-3 p-3 bg-accent/50 rounded-lg hover:bg-accent/70 transition-colors"
-                  >
-                    <div className="w-2 h-2 bg-secondary rounded-full flex-shrink-0"></div>
-                    <span className="text-foreground font-medium">{cert}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-6 p-4 bg-gradient-secondary rounded-lg">
-                <p className="text-secondary-foreground text-center font-medium">
-                  Committed to continuous learning and professional development
-                </p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         {/* Statistics */}
-        <div className="mt-16">
-          <Card className="glass-card">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-semibold text-gradient text-center mb-8">
-                Professional Impact
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <Card className="glass-card max-w-2xl mx-auto">
+          <CardContent className="p-8">
+            <div className="text-center">
+              <div className="flex items-center justify-center space-x-2 mb-4">
+                <Award className="h-8 w-8 text-primary" />
+                <h3 className="text-2xl font-semibold text-gradient">Continuous Learning</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">6+</div>
-                  <div className="text-muted-foreground">Years Experience</div>
+                  <div className="text-3xl font-bold text-gradient mb-2">{certificates.length}</div>
+                  <div className="text-muted-foreground">Certificates Earned</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">50+</div>
-                  <div className="text-muted-foreground">APIs Developed</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">20+</div>
-                  <div className="text-muted-foreground">Business Metrics</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">100%</div>
-                  <div className="text-muted-foreground">Project Success</div>
+                  <div className="text-3xl font-bold text-gradient mb-2">8+</div>
+                  <div className="text-muted-foreground">Years Learning</div>
                 </div>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+              <p className="text-muted-foreground mt-6 leading-relaxed">
+                Committed to professional development and staying current with industry best practices through continuous education and skill enhancement.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </section>
   );
 };
 
-export default Achievements;
+export default Certificates;
