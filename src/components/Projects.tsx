@@ -53,13 +53,13 @@ const Projects = () => {
       icon: Calculator
     },
     {
-      title: 'JSON Viewer',
-      description: 'A powerful JSON visualization and formatting tool with syntax highlighting, validation, and tree view capabilities.',
+      title: 'Resume Builder',
+      description: 'Create your perfect resume in minutes',
       image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
       technologies: ['TypeScript', 'JSON Processing', 'Web APIs', 'Data Visualization'],
       category: 'Developer Tools',
       links: {
-        live: '#',
+        live: 'https://zezhatools.lovable.app/',
         github: 'https://github.com/rajeshkanna-s'
       },
       icon: Code2
