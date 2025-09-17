@@ -88,6 +88,19 @@ const Projects = () => {
       },
       icon: Calculator
     }
+    ,
+    {
+      title: 'NoteIQ',
+      description: 'Your intelligent knowledge base. Upload documents, ask questions, and get instant AI-powered answers',
+      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
+      technologies: ['TypeScript', 'Data Libraries', 'Responsive Design', 'PWA'],
+      category: 'Utility Applications',
+      links: {
+        live: 'https://noteiq.lovable.app/',
+        github: 'https://github.com/rajeshkanna-s'
+      },
+      icon: Calculator
+    }
   ];
 
   return (
