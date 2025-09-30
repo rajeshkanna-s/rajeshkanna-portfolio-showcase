@@ -7,7 +7,7 @@ const Projects = () => {
     {
       title: 'ParkingMate',
       description: 'A smart parking management system that helps users find and book parking spaces efficiently with real-time availability tracking.',
-      image: '/lovable-uploads/695adda5-88b5-4d83-96d8-f1e0edb09b97.png',
+      image: '/lovable-uploads/parkingmate.png',
       technologies: ['React', 'Node.js', 'supabase', 'Real-time APIs'],
       category: 'Web Application',
       links: {
@@ -31,7 +31,7 @@ const Projects = () => {
     {
       title: 'AI Text Bot',
       description: 'An intelligent chatbot application built with modern AI technologies for natural language processing and conversation management.',
-      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
+      image: '/lovable-uploads/Aibot.png',
       technologies: ['JavaScript', 'AI/ML', 'REST APIs'],
       category: 'Web Application',
       links: {
@@ -43,7 +43,7 @@ const Projects = () => {
     {
       title: 'EMI Calculator',
       description: 'A comprehensive EMI calculation tool for loans and mortgages with advanced features for financial planning and analysis.',
-      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
+      image: '/lovable-uploads/loancalc.png',
       technologies: ['TypeScript', 'HTML5', 'CSS3', 'Financial Algorithms'],
       category: 'Financial Tools',
       links: {
@@ -55,7 +55,7 @@ const Projects = () => {
     {
       title: 'Resume Builder',
       description: 'Create your perfect resume in minutes',
-      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
+      image: '/lovable-uploads/resumebuilder.png',
       technologies: ['TypeScript', 'JSON Processing', 'Web APIs', 'Data Visualization'],
       category: 'Developer Tools',
       links: {
@@ -67,7 +67,7 @@ const Projects = () => {
     {
       title: 'TAX Calculator Compare',
       description: 'A collection of specialized calculators including scientific, financial, and statistical calculation tools.',
-      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
+      image: '/lovable-uploads/taxcompare.png',
       technologies: ['TypeScript', 'Mathematical Libraries', 'Responsive Design', 'PWA'],
       category: 'Utility Applications',
       links: {
@@ -79,7 +79,7 @@ const Projects = () => {
     {
       title: 'Invoice Generator',
       description: 'Create beautiful invoices in seconds',
-      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
+      image: '/lovable-uploads/invoicegen.png',
       technologies: ['TypeScript', 'Mathematical Libraries', 'Responsive Design', 'PWA'],
       category: 'Utility Applications',
       links: {
@@ -92,7 +92,7 @@ const Projects = () => {
     {
       title: 'NoteIQ',
       description: 'Your intelligent knowledge base. Upload documents, ask questions, and get instant AI-powered answers',
-      image: '/lovable-uploads/db9da8b4-1c70-4135-838e-f26e313b4406.png',
+      image: '/lovable-uploads/noteiq.png',
       technologies: ['TypeScript', 'Data Libraries', 'Responsive Design', 'PWA'],
       category: 'Utility Applications',
       links: {
@@ -119,17 +119,22 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card key={index} className="glass-card hover-lift group overflow-hidden">
               {/* Project Image */}
-              <div className="relative h-40 sm:h-48 bg-gradient-primary overflow-hidden">
-                <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <project.icon className="h-16 w-16 text-white opacity-80" />
-                </div>
-                <div className="absolute top-4 right-4">
-                  <span className="px-2 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">
-                    {project.category}
-                  </span>
-                </div>
-              </div>
+              <div className="relative h-40 sm:h-48 overflow-hidden">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 bg-black/30"></div>
+  <div className="absolute inset-0 flex items-center justify-center">
+    <project.icon className="h-16 w-16 text-white opacity-90" />
+  </div>
+  <div className="absolute top-4 right-4">
+    <span className="px-2 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">
+      {project.category}
+    </span>
+  </div>
+</div>
 
               <CardHeader>
                 <CardTitle className="text-xl text-foreground group-hover:text-primary transition-colors">
@@ -191,11 +196,11 @@ const Projects = () => {
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">8+</div>
+                  <div className="text-3xl font-bold text-gradient mb-2">20+</div>
                   <div className="text-muted-foreground">Active Projects</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">50K+</div>
+                  <div className="text-3xl font-bold text-gradient mb-2">500K+</div>
                   <div className="text-muted-foreground">Lines of Code</div>
                 </div>
                 <div className="text-center">
