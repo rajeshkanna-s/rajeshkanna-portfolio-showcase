@@ -6,7 +6,7 @@ const About = () => {
     {
       icon: Code,
       title: '8+ Years Experience',
-      description: 'Professional software development experience',
+      description: 'Professional software development experience and Technical Support',
     },
     {
       icon: Award,
@@ -42,9 +42,9 @@ const About = () => {
 
             <div className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed text-foreground">
               <p>
-                I'm a dedicated and highly skilled Software Engineer with over{' '}
+                I'm a dedicated and highly skilled Software Engineer with total{' '}
                 <span className="font-semibold text-primary">8+ years of experience</span>{' '}
-                as a specialized developer. My expertise spans across API development, 
+                as a specialized developer and technical support. My expertise spans across API development, 
                 product innovation, loan processing, KYC compliance, and web application development.
               </p>
               
@@ -57,7 +57,9 @@ const About = () => {
 
               <p>
                 Currently seeking challenging opportunities as a{' '}
-                <span className="font-semibold text-secondary">Java Developer</span>{' '}
+                <span className="font-semibold text-secondary">Java Developer</span>{' , '}
+                <span className="font-semibold text-secondary">API Developer</span>{' and '}
+                <span className="font-semibold text-secondary">Full Stack Developer</span>{' '}
                 to leverage my technical expertise and drive innovation in dynamic 
                 development environments.
               </p>
