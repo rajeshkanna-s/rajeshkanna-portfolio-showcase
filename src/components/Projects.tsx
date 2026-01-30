@@ -100,6 +100,18 @@ const Projects = () => {
         github: 'https://github.com/rajeshkanna-s'
       },
       icon: Calculator
+    },
+    {
+      title: 'HealthyPlates',
+      description: 'A simple, practical healthy eating platform helping users discover nutritious recipes and meal plans for a healthier lifestyle.',
+      image: '/lovable-uploads/healthyplates.png',
+      technologies: ['React', 'TypeScript', 'PostgreSQL', 'Cloud Hosting'],
+      category: 'Health & Wellness',
+      links: {
+        live: 'https://healthyplates.in/',
+        github: 'https://github.com/rajeshkanna-s'
+      },
+      icon: Globe
     }
   ];
 
