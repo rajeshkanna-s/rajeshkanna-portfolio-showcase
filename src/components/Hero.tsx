@@ -18,24 +18,21 @@ const Hero = () => {
           {/* Left Side - Content */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left text-gray-800 dark:text-white space-y-6 md:space-y-8 animate-fade-in mt-10 sm:mt-16 w-full">
             <div className="space-y-2 md:space-y-4 w-full">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-                Rajeshkanna,
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-pink-600 bg-clip-text text-transparent">
+                Senior Software Engineer | Java & Spring Boot | Full-Stack Problem Solver
               </h1>
-              <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-pink-600 dark:text-pink-300 mb-2">
-                Software Engineer
-              </h2>
-              <p className="text-base sm:text-lg md:text-xl opacity-90 max-w-md sm:max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Passionate Software Engineer with 8+ years of experience in full-stack development, API integration, and technical support. Specialized in Java, Spring Boot, and modern web technologies.
+              <p className="text-base sm:text-lg md:text-xl opacity-90 max-w-md sm:max-w-xl mx-auto lg:mx-0 leading-relaxed text-gray-700 dark:text-gray-200">
+                8+ years building scalable, high-performance web applications in Java, Spring Boot, React, and Node.js. I turn complex business requirements into reliable, production-ready systems.
               </p>
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center lg:justify-start">
               <Button
-                onClick={() => scrollToSection('about')}
+                onClick={() => scrollToSection('projects')}
                 size="lg"
-                className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all duration-300 shadow-medium font-semibold text-base sm:text-lg"
+                className="w-full sm:w-auto bg-pink-600 text-white hover:bg-pink-700 hover:scale-105 transition-all duration-300 shadow-medium font-semibold text-base sm:text-lg"
               >
-                Explore My Work
+                View My Projects
                 <ArrowDown className="ml-2 h-5 w-5" />
               </Button>
               <Button
