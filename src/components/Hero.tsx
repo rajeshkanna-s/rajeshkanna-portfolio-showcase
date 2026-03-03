@@ -45,7 +45,7 @@ const Hero = () => {
                 onClick={() => scrollToSection('freelance-portfolio')}
               >
                 <ArrowDown className="mr-2 h-5 w-5" />
-                View My Projects
+                View My Freelancing Portfolio
               </Button>
             </div>
             {/* Social Links */}
