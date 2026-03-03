@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Globe, Download, MessageCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -81,12 +81,9 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Initialize EmailJS if not already done
       emailjs.init("yeIOTD4_n_jgpIkBo");
-      
-      // Using EmailJS
       await emailjs.sendForm("service_5eim7li", "template_jij3tij", e.target as HTMLFormElement);
-      
+
       toast({
         title: "Message Sent!",
         description: "Thank you for your message. I'll get back to you soon!",
@@ -114,16 +111,28 @@ const Contact = () => {
 
   const contactInfo = [
     {
+      icon: MessageCircle,
+      title: 'WhatsApp',
+      content: '+91 86674 54755',
+      link: 'https://wa.me/918667454755'
+    },
+    {
       icon: Mail,
       title: 'Email',
       content: 'rajeshkannaprogrammer@gmail.com',
       link: 'mailto:rajeshkannaprogrammer@gmail.com'
     },
     {
+      icon: Download,
+      title: 'Resume',
+      content: 'Download Resume',
+      link: 'https://drive.google.com/uc?export=download&id=17F81SgzsZ-7pKuZnxijNL64vo0uZp2mc'
+    },
+    {
       icon: Phone,
       title: 'Phone',
       content: '+91 8667454***',
-      link: 'tel:+918667454***'
+      link: 'tel:+918667454755'
     },
     {
       icon: MapPin,
@@ -139,37 +148,48 @@ const Contact = () => {
     }
   ];
 
-  const socialLinks = [
-    {
-      icon: Linkedin,
-      name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/rajeshkanna-s',
-      color: 'hover:text-blue-600'
-    },
-    {
-      icon: Github,
-      name: 'GitHub',
-      url: 'https://github.com/rajeshkanna-s',
-      color: 'hover:text-gray-800'
-    },
-    {
-      icon: Mail,
-      name: 'Email',
-      url: 'mailto:rajeshkannaprogrammer@gmail.com',
-      color: 'hover:text-red-600'
-    }
-  ];
-
   return (
     <section id="contact" className="section-padding bg-gradient-to-b from-background to-accent/30">
       <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-            Let's Connect
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-block px-4 py-1.5 bg-pink-100 dark:bg-pink-800/50 text-pink-600 dark:text-pink-300 text-sm font-semibold rounded-full mb-4">
+            Let's Work Together
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-4">
+            Get In Touch
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to discuss your next project? I'd love to hear from you. Let's create something amazing together.
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+            Ready to get your website built? Reach out and let's make it happen!
           </p>
+        </div>
+
+        {/* Quick CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-10 sm:mb-14">
+          <Button
+            size="lg"
+            className="bg-green-600 hover:bg-green-700 text-white font-semibold text-base sm:text-lg hover:scale-105 transition-all duration-300 shadow-lg"
+            onClick={() => window.open('https://wa.me/918667454755', '_blank')}
+          >
+            <MessageCircle className="h-5 w-5 mr-2" />
+            WhatsApp Me
+          </Button>
+          <Button
+            size="lg"
+            className="bg-gradient-primary hover:shadow-medium font-semibold text-base sm:text-lg hover:scale-105 transition-all duration-300"
+            onClick={() => window.open('mailto:rajeshkannaprogrammer@gmail.com', '_blank')}
+          >
+            <Mail className="h-5 w-5 mr-2" />
+            Hire Me
+          </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-primary text-primary hover:bg-primary hover:text-white font-semibold text-base sm:text-lg hover:scale-105 transition-all duration-300"
+            onClick={() => window.open('https://wa.me/918667454755?text=Hi%20Rajeshkanna%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20website%20project.', '_blank')}
+          >
+            <Phone className="h-5 w-5 mr-2" />
+            Book Free Consultation
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
@@ -279,15 +299,17 @@ const Contact = () => {
 
           {/* Contact Information */}
           <div className="space-y-6 sm:space-y-8 w-full">
-            {/* Contact Details */}
             <Card className="glass-card w-full">
               <CardHeader>
-                <CardTitle className="text-2xl text-gradient">Get In Touch</CardTitle>
+                <CardTitle className="text-2xl text-gradient">Contact Details</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4 sm:space-y-6">
+              <CardContent className="space-y-4 sm:space-y-5">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center space-x-4">
-                    <div className="p-3 bg-gradient-primary rounded-full">
+                    <div className={`p-3 rounded-full ${info.title === 'WhatsApp'
+                        ? 'bg-green-500'
+                        : 'bg-gradient-primary'
+                      }`}>
                       <info.icon className="h-5 w-5 text-white" />
                     </div>
                     <div>
@@ -317,22 +339,32 @@ const Contact = () => {
               </CardHeader>
               <CardContent className="p-4 sm:p-6">
                 <div className="flex flex-wrap gap-3 sm:gap-4 justify-center">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`p-3 bg-muted rounded-full ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-medium`}
-                      aria-label={social.name}
-                    >
-                      <social.icon className="h-6 w-6" />
-                    </a>
-                  ))}
+                  <a
+                    href="https://www.linkedin.com/in/rajeshkanna-s"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-muted rounded-full hover:text-blue-600 transition-all duration-300 hover:scale-110 hover:shadow-medium"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://github.com/rajeshkanna-s"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-muted rounded-full hover:text-gray-800 transition-all duration-300 hover:scale-110 hover:shadow-medium"
+                    aria-label="GitHub"
+                  >
+                    <Github className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="mailto:rajeshkannaprogrammer@gmail.com"
+                    className="p-3 bg-muted rounded-full hover:text-red-600 transition-all duration-300 hover:scale-110 hover:shadow-medium"
+                    aria-label="Email"
+                  >
+                    <Mail className="h-6 w-6" />
+                  </a>
                 </div>
-                <p className="text-muted-foreground mt-4 leading-relaxed">
-                  Connect with me on social media for updates on my latest projects and professional insights.
-                </p>
               </CardContent>
             </Card>
 
@@ -343,46 +375,12 @@ const Contact = () => {
                   <div className="w-3 h-3 bg-green-500 rounded-full mx-auto mb-3 animate-pulse"></div>
                   <h3 className="font-semibold text-foreground mb-2">Available for Projects</h3>
                   <p className="text-muted-foreground text-sm">
-                    Currently accepting new opportunities and collaborations
+                    Currently accepting new website projects and collaborations
                   </p>
                 </div>
               </CardContent>
             </Card>
           </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-10 sm:mt-16">
-          <Card className="glass-card max-w-full sm:max-w-3xl mx-auto">
-            <CardContent className="p-4 sm:p-8">
-              <h3 className="text-2xl font-semibold text-gradient mb-4">
-                Ready to Start Your Project?
-              </h3>
-              <p className="text-muted-foreground mb-6 leading-relaxed">
-                Whether you need a full-stack web application, API development, or technical consultation, 
-                I'm here to help bring your ideas to life with cutting-edge technology and best practices.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-primary hover:shadow-medium transition-all duration-300"
-                  onClick={() => window.open('mailto:rajeshkannaprogrammer@gmail.com', '_blank')}
-                >
-                  <Mail className="h-5 w-5 mr-2" />
-                  Email Me
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                  onClick={() => window.open('https://www.linkedin.com/in/rajeshkanna-s', '_blank')}
-                >
-                  <Linkedin className="h-5 w-5 mr-2" />
-                  Connect on LinkedIn
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>

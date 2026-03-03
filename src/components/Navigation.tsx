@@ -24,20 +24,19 @@ const Navigation = () => {
 
   const navItems = [
     { id: 'about', label: 'About' },
+    { id: 'services', label: 'Services' },
+    { id: 'freelance-portfolio', label: 'Portfolio' },
     { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
-    { id: 'education', label: 'Education' },
-    { id: 'certificates', label: 'Certificates' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
   ];
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-border' 
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+        ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-border'
         : 'bg-transparent'
-    }`}>
+      }`}>
       <div className="section-container">
         <div className="flex justify-between items-center py-3 sm:py-4 px-2 sm:px-0">
           {/* Logo */}

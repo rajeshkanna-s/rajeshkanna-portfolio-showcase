@@ -1,4 +1,4 @@
-import { ArrowDown, Download, Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { ArrowDown, MessageCircle, Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -18,31 +18,34 @@ const Hero = () => {
           {/* Left Side - Content */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left text-gray-800 dark:text-white space-y-6 md:space-y-8 animate-fade-in mt-10 sm:mt-16 w-full">
             <div className="space-y-2 md:space-y-4 w-full">
+              <div className="inline-block px-4 py-1.5 bg-pink-100 dark:bg-pink-800/50 text-pink-600 dark:text-pink-300 text-sm font-semibold rounded-full mb-2">
+                🚀  Software Engineer & Freelance Web Developer
+              </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight tracking-tight text-gradient bg-gradient-to-r from-pink-500 via-purple-500 to-pink-600 bg-clip-text text-transparent">
-                Senior Software Engineer | Java & Spring Boot | Full-Stack Problem Solver
+                I Build Fast, Modern & High‑Converting Websites for Startups & Small Businesses
               </h1>
               <p className="text-base sm:text-lg md:text-xl opacity-90 max-w-md sm:max-w-xl mx-auto lg:mx-0 leading-relaxed text-gray-700 dark:text-gray-200">
-                8+ years building scalable, high-performance web applications in Java, Spring Boot, React, and Node.js. I turn complex business requirements into reliable, production-ready systems.
+                I help founders, professionals, and small businesses create stunning online portfolios & websites that bring more clients, more trust, and more visibility.
               </p>
             </div>
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-center lg:justify-start">
               <Button
-                onClick={() => scrollToSection('projects')}
+                onClick={() => window.open('https://wa.me/918667454755', '_blank')}
                 size="lg"
-                className="w-full sm:w-auto bg-pink-600 text-white hover:bg-pink-700 hover:scale-105 transition-all duration-300 shadow-medium font-semibold text-base sm:text-lg"
+                className="w-full sm:w-auto bg-green-600 text-white hover:bg-green-700 hover:scale-105 transition-all duration-300 shadow-medium font-semibold text-base sm:text-lg"
               >
-                View My Projects
-                <ArrowDown className="ml-2 h-5 w-5" />
+                <MessageCircle className="mr-2 h-5 w-5" />
+                WhatsApp Me
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="w-full sm:w-auto border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white dark:border-pink-300 dark:text-pink-300 dark:hover:bg-pink-300 dark:hover:text-gray-900 transition-all duration-300 font-semibold text-base sm:text-lg"
-                onClick={() => window.open('https://drive.google.com/uc?export=download&id=17F81SgzsZ-7pKuZnxijNL64vo0uZp2mc', '_blank')}
+                onClick={() => scrollToSection('freelance-portfolio')}
               >
-                <Download className="mr-2 h-5 w-5" />
-                Download Resume
+                <ArrowDown className="mr-2 h-5 w-5" />
+                View My Projects
               </Button>
             </div>
             {/* Social Links */}
@@ -73,7 +76,7 @@ const Hero = () => {
                 <Mail className="h-5 w-5 sm:h-6 sm:w-6" />
               </a>
               <a
-                href="tel:8667454***"
+                href="tel:8667454755"
                 className="p-2 sm:p-3 bg-pink-100 dark:bg-pink-800 rounded-full hover:bg-pink-200 dark:hover:bg-pink-700 transition-all duration-300 hover:scale-110 text-pink-600 dark:text-pink-300"
                 aria-label="Phone"
               >
