@@ -131,7 +131,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+91 8667454***',
+      content: '+91 ',
       link: 'tel:+918667454755'
     },
     {
@@ -307,8 +307,8 @@ const Contact = () => {
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-center space-x-4">
                     <div className={`p-3 rounded-full ${info.title === 'WhatsApp'
-                        ? 'bg-green-500'
-                        : 'bg-gradient-primary'
+                      ? 'bg-green-500'
+                      : 'bg-gradient-primary'
                       }`}>
                       <info.icon className="h-5 w-5 text-white" />
                     </div>

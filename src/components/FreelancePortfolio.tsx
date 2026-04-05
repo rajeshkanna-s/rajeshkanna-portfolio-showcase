@@ -35,60 +35,72 @@ const FreelancePortfolio = () => {
         { title: 'RestoBills', industry: 'Restaurant Billing', url: 'https://restobills.netlify.app/', color: 'from-orange-500 to-red-500' },
     ];
 
-    const ProjectCard = ({ project }: { project: { title: string; industry: string; url: string; color: string } }) => (
-        <Card className="glass-card hover-lift group overflow-hidden">
-            {/* Live Site Preview */}
-            <div
-                className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800 cursor-pointer"
-                style={{ height: '320px' }}
+    const ProjectCard = ({ project }: { project: { title: string; industry: string; url: string; color: string } }) => {
+        return (
+            <Card className="glass-card hover-lift group overflow-hidden cursor-pointer"
                 onClick={() => window.open(project.url, '_blank')}
             >
-                <iframe
-                    src={project.url}
-                    title={project.title}
-                    className="absolute top-0 left-0 border-0 pointer-events-none"
-                    style={{
-                        width: '1280px',
-                        height: '900px',
-                        transform: 'scale(0.45)',
-                        transformOrigin: 'top left',
-                    }}
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin"
-                />
-                {/* Overlay for click handling */}
-                <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-all duration-300 z-10"></div>
+                {/* Live Iframe Preview */}
+                <div
+                    className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800"
+                    style={{ height: '220px' }}
+                >
+                    {/* Gradient fallback background */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20`} />
 
-                {/* Industry badge */}
-                <div className="absolute top-3 right-3 z-20">
-                    <span className={`px-3 py-1.5 bg-gradient-to-r ${project.color} text-white text-xs font-semibold rounded-full shadow-lg`}>
-                        {project.industry}
-                    </span>
-                </div>
-            </div>
+                    <iframe
+                        src={project.url}
+                        title={`${project.title} - ${project.industry}`}
+                        className="absolute top-0 left-0 border-0 pointer-events-none"
+                        style={{
+                            width: '1280px',
+                            height: '900px',
+                            transform: 'scale(0.42)',
+                            transformOrigin: 'top left',
+                        }}
+                        loading="lazy"
+                        sandbox="allow-scripts allow-same-origin"
+                    />
 
-            {/* Card Footer */}
-            <CardContent className="p-4 sm:p-5">
-                <div className="flex items-center justify-between">
-                    <div>
-                        <h3 className="font-bold text-foreground text-lg group-hover:text-primary transition-colors">
-                            {project.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm mt-0.5">{project.industry}</p>
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center z-10">
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-slate-800/90 text-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm">
+                            <ExternalLink className="h-4 w-4 inline mr-1.5 -mt-0.5" />
+                            View Live Site
+                        </span>
                     </div>
-                    <Button
-                        variant="outline"
-                        size="sm"
-                        className="hover:bg-primary hover:text-white transition-all font-semibold"
-                        onClick={(e) => { e.stopPropagation(); window.open(project.url, '_blank'); }}
-                    >
-                        <ExternalLink className="h-4 w-4 mr-1.5" />
-                        View Site
-                    </Button>
+
+                    {/* Industry badge */}
+                    <div className="absolute top-3 right-3 z-20">
+                        <span className={`px-3 py-1.5 bg-gradient-to-r ${project.color} text-white text-xs font-semibold rounded-full shadow-lg`}>
+                            {project.industry}
+                        </span>
+                    </div>
                 </div>
-            </CardContent>
-        </Card>
-    );
+
+                {/* Card Footer */}
+                <CardContent className="p-4 sm:p-5">
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <h3 className="font-bold text-foreground text-lg group-hover:text-primary transition-colors">
+                                {project.title}
+                            </h3>
+                            <p className="text-muted-foreground text-sm mt-0.5">{project.industry}</p>
+                        </div>
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            className="hover:bg-primary hover:text-white transition-all font-semibold"
+                            onClick={(e) => { e.stopPropagation(); window.open(project.url, '_blank'); }}
+                        >
+                            <ExternalLink className="h-4 w-4 mr-1.5" />
+                            View Site
+                        </Button>
+                    </div>
+                </CardContent>
+            </Card>
+        );
+    };
 
     const SectionHeader = ({ icon: Icon, title, count }: { icon: typeof Briefcase; title: string; count: number }) => (
         <div className="flex items-center gap-3 mb-8">

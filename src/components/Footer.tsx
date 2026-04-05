@@ -1,5 +1,4 @@
 import { Heart, ArrowUp } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -49,15 +48,13 @@ const Footer = () => {
 
             {/* Right - Scroll to Top */}
             <div className="text-center md:text-right mb-2 md:mb-0">
-              <Button
+              <button
                 onClick={scrollToTop}
-                variant="outline"
-                size="sm"
-                className="border-white text-white hover:bg-white hover:text-primary transition-all duration-300"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-white/60 text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 font-medium text-sm"
               >
-                <ArrowUp className="h-4 w-4 mr-2" />
+                <ArrowUp className="h-4 w-4" />
                 Back to Top
-              </Button>
+              </button>
             </div>
           </div>
 
