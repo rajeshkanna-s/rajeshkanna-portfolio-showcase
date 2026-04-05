@@ -72,12 +72,12 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/rajeshkanna-s"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-pink-200 transition-colors font-medium"
+                className="text-white hover:text-blue-200 transition-colors font-medium"
               >
                 Rajeshkanna S
               </a>
               {' '}with{' '}
-              <Heart className="h-4 w-4 text-pink-300 fill-current" />
+              <Heart className="h-4 w-4 text-red-300 fill-current" />
             </p>
             <p className="text-white/60 text-sm mt-2">
               © {currentYear} Rajeshkanna S. All Rights Reserved.

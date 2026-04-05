@@ -60,7 +60,7 @@ const WhyChooseMe = () => {
         <section id="why-choose-me" className="section-padding bg-muted/30">
             <div className="section-container">
                 <div className="text-center mb-12 sm:mb-16">
-                    <div className="inline-block px-4 py-1.5 bg-pink-100 dark:bg-pink-800/50 text-pink-600 dark:text-pink-300 text-sm font-semibold rounded-full mb-4">
+                    <div className="inline-block px-4 py-1.5 bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm font-semibold rounded-full mb-4">
                         Trust & Quality
                     </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gradient mb-4">

@@ -1,140 +1,203 @@
-import { useState, useEffect } from 'react';
-import { Code2, Database, Globe, Wrench } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useEffect, useRef, useState } from 'react';
 
-const Skills = () => {
-  const [isVisible, setIsVisible] = useState(false);
+/* ── Skill item type ── */
+interface Skill {
+  name: string;
+  icon: string;   // Simple Icons slug
+  color: string;  // hex color (with #)
+}
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.3 }
+/* ═══════════════════════════════════════════════
+   SECTION 1  —  Technical Skills
+   ═══════════════════════════════════════════════ */
+const skillRows: Skill[][] = [
+  [
+    { name: 'Java', icon: 'openjdk', color: '#ED8B00' },
+    { name: 'Spring Boot', icon: 'springboot', color: '#6DB33F' },
+    { name: 'Spring Framework', icon: 'spring', color: '#6DB33F' },
+    { name: 'React', icon: 'react', color: '#61DAFB' },
+    { name: 'TypeScript', icon: 'typescript', color: '#3178C6' },
+    { name: 'JavaScript', icon: 'javascript', color: '#F7DF1E' },
+    { name: 'Python', icon: 'python', color: '#3776AB' },
+    { name: 'Node.js', icon: 'nodedotjs', color: '#5FA04E' },
+    { name: 'Express', icon: 'express', color: '#353535' },
+    { name: 'HTML', icon: 'html5', color: '#E34F26' },
+    { name: 'CSS', icon: 'css', color: '#1572B6' },
+    { name: 'Tailwind CSS', icon: 'tailwindcss', color: '#06B6D4' },
+    { name: 'Bootstrap', icon: 'bootstrap', color: '#7952B3' },
+    { name: 'Framer', icon: 'framer', color: '#0055FF' },
+  ],
+  [
+    { name: 'MySQL', icon: 'mysql', color: '#4479A1' },
+    { name: 'PostgreSQL', icon: 'postgresql', color: '#4169E1' },
+    { name: 'MongoDB', icon: 'mongodb', color: '#47A248' },
+    { name: 'Docker', icon: 'docker', color: '#2496ED' },
+    { name: 'AWS', icon: 'amazonaws', color: '#FF9900' },
+    { name: 'Vercel', icon: 'vercel', color: '#1A1A1A' },
+    { name: 'Git', icon: 'git', color: '#F05032' },
+    { name: 'GitHub', icon: 'github', color: '#181717' },
+    { name: 'Postman', icon: 'postman', color: '#FF6C37' },
+    { name: 'Jira', icon: 'jira', color: '#0052CC' },
+    { name: 'Eclipse/STS', icon: 'eclipseide', color: '#2C2255' },
+    { name: 'Tomcat', icon: 'apachetomcat', color: '#F8DC75' },
+    { name: 'jQuery', icon: 'jquery', color: '#0769AD' },
+    { name: 'Vite', icon: 'vite', color: '#646CFF' },
+  ],
+  [
+    { name: 'REST API', icon: 'openapiinitiative', color: '#6BA539' },
+    { name: 'Microservices', icon: 'kubernetes', color: '#326CE5' },
+    { name: 'OOPS', icon: 'cplusplus', color: '#00599C' },
+    { name: 'Data Structures', icon: 'leetcode', color: '#FFA116' },
+    { name: 'Advanced Excel', icon: 'microsoftexcel', color: '#217346' },
+    { name: 'Supabase', icon: 'supabase', color: '#3FCF8E' },
+    { name: 'Firebase', icon: 'firebase', color: '#DD2C00' },
+    { name: 'Responsive Design', icon: 'googlechrome', color: '#4285F4' },
+    { name: 'Agile', icon: 'scrumalliance', color: '#009FDA' },
+  ],
+];
+
+/* ═══════════════════════════════════════════════
+   SECTION 2  —  AI & Tech Stack
+   ═══════════════════════════════════════════════ */
+const aiRows: Skill[][] = [
+  [
+    { name: 'ChatGPT', icon: 'openai', color: '#10A37F' },
+    { name: 'Claude', icon: 'anthropic', color: '#D4A574' },
+    { name: 'Google Gemini', icon: 'googlegemini', color: '#8E75B2' },
+    { name: 'GitHub Copilot', icon: 'githubcopilot', color: '#2B3137' },
+    { name: 'Cursor AI', icon: 'cursor', color: '#00D4AA' },
+    { name: 'Midjourney', icon: 'midjourney', color: '#1A1A1A' },
+    { name: 'DALL·E', icon: 'openai', color: '#FF6B35' },
+    { name: 'Runway', icon: 'runway', color: '#1A1A1A' },
+    { name: 'ElevenLabs', icon: 'elevenlabs', color: '#1A1A1A' },
+    { name: 'Perplexity AI', icon: 'perplexity', color: '#1FB8CD' },
+    { name: 'Microsoft Copilot', icon: 'microsoft', color: '#5E5E5E' },
+    { name: 'Meta AI', icon: 'meta', color: '#0081FB' },
+    { name: 'Mistral AI', icon: 'mistral', color: '#FF7000' },
+  ],
+];
+
+/* ═══════════════════════════════════════════════
+   Icon with fallback
+   ═══════════════════════════════════════════════ */
+const SkillIcon = ({ skill }: { skill: Skill }) => {
+  const [failed, setFailed] = useState(false);
+  const initial = skill.name.charAt(0).toUpperCase();
+
+  if (failed) {
+    return (
+      <div
+        className="marquee-icon-fallback"
+        style={{ background: skill.color }}
+      >
+        {initial}
+      </div>
     );
-
-    const element = document.getElementById('skills');
-    if (element) observer.observe(element);
-
-    return () => observer.disconnect();
-  }, []);
-
-  const skillCategories = [
-    {
-      icon: Code2,
-      title: 'Programming Languages',
-      skills: [
-        { name: 'Java & Spring Boot', level: 90 },
-        { name: 'RESTful APIs', level: 90 },
-        { name: 'JavaScript', level: 85 },
-        { name: 'HTML/CSS', level: 85 },
-        { name: 'C & C++', level: 70 },
-      ]
-    },
-    {
-      icon: Globe,
-      title: 'Web Technologies',
-      skills: [
-        { name: 'Angular', level: 85 },
-        { name: 'JSP', level: 85 },
-        { name: 'jQuery', level: 85 },
-        { name: 'Responsive Design', level: 88 },
-        { name: 'Web APIs', level: 92 },
-      ]
-    },
-    {
-      icon: Database,
-      title: 'Database & Tools',
-      skills: [
-        { name: 'MySQL', level: 97 },
-        { name: 'Git', level: 90 },
-        { name: 'Eclipse/STS', level: 95 },
-        { name: 'Postman', level: 95 },
-        { name: 'Jira', level: 90 },
-      ]
-    },
-    {
-      icon: Wrench,
-      title: 'Professional Skills',
-      skills: [
-        { name: 'Problem Solving', level: 90 },
-        { name: 'Team Collaboration', level: 85 },
-        { name: 'Communication', level: 85 },
-        { name: 'Advanced Excel', level: 97 },
-        { name: 'Time Management', level: 85 },
-      ]
-    }
-  ];
+  }
 
   return (
-    <section id="skills" className="section-padding bg-background">
-      <div className="section-container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-            Technical Skills
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive overview of my technical expertise and professional capabilities
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="glass-card hover-lift">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2 sm:space-x-3 text-lg sm:text-xl">
-                  <div className="p-1.5 sm:p-2 bg-gradient-primary rounded-lg">
-                    <category.icon className="h-5 w-5 text-white" />
-                  </div>
-                  <span className="text-foreground">{category.title}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4 sm:space-y-6">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="space-y-1 sm:space-y-2">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-foreground text-sm sm:text-base">{skill.name}</span>
-                      <span className="text-xs sm:text-sm text-muted-foreground">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar h-2 rounded bg-gray-200 overflow-hidden">
-                      <div
-                        className={`skill-progress bg-gradient-primary h-2 rounded ${isVisible ? 'w-full' : 'w-0'}`}
-                        style={{
-                          width: isVisible ? `${skill.level}%` : '0%',
-                          transitionDelay: `${skillIndex * 100}ms`
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Additional Skills */}
-        <div className="mt-10 sm:mt-16 text-center">
-          <h3 className="text-2xl font-semibold text-foreground mb-6">Additional Expertise</h3>
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
-            {[
-              'API Integration', 'Payment Processing', 'KYC Compliance', 'Data Structures & Algorithms',
-              'Microservices', 'Technical Support', 'System Integration', 'Software Architecture',
-              'Agile Development', 'Code Review', 'Performance Optimization', 'Security Best Practices'
-            ].map((skill, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-gradient-secondary text-secondary-foreground rounded-full font-medium hover:scale-105 transition-transform cursor-default"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+    <img
+      src={`https://cdn.simpleicons.org/${skill.icon}/${skill.color.replace('#', '')}`}
+      alt={skill.name}
+      width={20}
+      height={20}
+      loading="lazy"
+      className="marquee-icon"
+      onError={() => setFailed(true)}
+    />
   );
 };
+
+/* ═══════════════════════════════════════════════
+   Marquee Row
+   ═══════════════════════════════════════════════ */
+interface MarqueeRowProps {
+  skills: Skill[];
+  direction?: 'left' | 'right';
+  speed?: number;
+}
+
+const MarqueeRow = ({ skills, direction = 'left', speed = 35 }: MarqueeRowProps) => {
+  const trackRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    const pause = () => { el.style.animationPlayState = 'paused'; };
+    const play  = () => { el.style.animationPlayState = 'running'; };
+    el.addEventListener('mouseenter', pause);
+    el.addEventListener('mouseleave', play);
+    return () => {
+      el.removeEventListener('mouseenter', pause);
+      el.removeEventListener('mouseleave', play);
+    };
+  }, []);
+
+  const doubled = [...skills, ...skills];
+
+  return (
+    <div className="marquee-viewport">
+      <div
+        ref={trackRef}
+        className={`marquee-track ${direction === 'right' ? 'marquee-reverse' : 'marquee-forward'}`}
+        style={{ animationDuration: `${speed}s` }}
+      >
+        {doubled.map((s, i) => (
+          <div key={i} className="marquee-pill group">
+            <SkillIcon skill={s} />
+            <span className="marquee-label">{s.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+/* ═══════════════════════════════════════════════
+   Main Skills Component — two sections
+   ═══════════════════════════════════════════════ */
+const Skills = () => (
+  <>
+    {/* ─── Section 1: Technical Skills ─── */}
+    <section id="skills" className="skills-section">
+      <div className="skills-header">
+        <p className="skills-eyebrow">What I Work With</p>
+        <h2 className="skills-title">
+          Skills
+        </h2>
+        <p className="skills-subtitle">
+          A continuously scrolling showcase of the technologies and frameworks I use daily
+        </p>
+      </div>
+
+      <div className="marquee-wrapper">
+        <div className="marquee-fade-left" />
+        <div className="marquee-fade-right" />
+        <MarqueeRow skills={skillRows[0]} direction="left"  speed={40} />
+        <MarqueeRow skills={skillRows[1]} direction="right" speed={45} />
+        <MarqueeRow skills={skillRows[2]} direction="left"  speed={35} />
+      </div>
+    </section>
+
+    {/* ─── Section 2: AI & Tech Stack ─── */}
+    <section id="ai-tools" className="skills-section skills-section-alt">
+      <div className="skills-header">
+        <p className="skills-eyebrow">Powered By Intelligence</p>
+        <h2 className="skills-title">
+          Tech Stack & AI — <span className="text-gradient">all in motion.</span>
+        </h2>
+        <p className="skills-subtitle">
+          AI-powered tools I leverage to build faster, smarter, and more creatively
+        </p>
+      </div>
+
+      <div className="marquee-wrapper">
+        <div className="marquee-fade-left marquee-fade-alt" />
+        <div className="marquee-fade-right marquee-fade-alt" />
+        <MarqueeRow skills={aiRows[0]} direction="left" speed={30} />
+      </div>
+    </section>
+  </>
+);
 
 export default Skills;

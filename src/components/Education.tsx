@@ -19,40 +19,6 @@ const Education = () => {
         'Operating Systems',
         'Object-Oriented Programming'
       ]
-    },
-    {
-      degree: 'Higher Secondary Certificate (HSC)',
-      field: 'Science Stream',
-      institution: 'Govt Boys Higher Secondary School',
-      period: '2012 - 2014',
-      location: 'Chennai, India',
-      type: 'Full-time',
-      description: 'Focused on mathematics, physics, and chemistry with strong analytical and problem-solving foundation.',
-      highlights: [
-        'Mathematics',
-        'Physics',
-        'Chemistry',
-        'Computer Science',
-        'Analytical Thinking',
-        'Problem Solving'
-      ]
-    },
-    {
-      degree: 'Secondary School Leaving Certificate (SSLC)',
-      field: 'General Education',
-      institution: 'Govt Boys Higher Secondary School',
-      period: '2011 - 2012',
-      location: 'Chennai, India',
-      type: 'Full-time',
-      description: 'Foundation education covering core subjects with emphasis on academic excellence and discipline.',
-      highlights: [
-        'Core Subjects',
-        'Academic Excellence',
-        'Foundational Skills',
-        'Discipline',
-        'Time Management',
-        'Study Habits'
-      ]
     }
   ];
 

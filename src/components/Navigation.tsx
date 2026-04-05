@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +42,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-        ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-border'
+        ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-soft border-b border-border'
         : 'bg-transparent'
       }`}>
       <div className="section-container">
@@ -66,6 +67,7 @@ const Navigation = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 hover:w-full"></span>
               </button>
             ))}
+            <ThemeToggle />
             <Button
               onClick={() => scrollToSection('contact')}
               className="bg-gradient-primary hover:shadow-medium transition-all duration-300"
@@ -85,7 +87,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-border shadow-medium z-50">
+          <div className="md:hidden absolute top-full left-0 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-border shadow-medium z-50">
             <div className="py-3 space-y-2">
               {navItems.map((item) => (
                 <button
@@ -96,10 +98,11 @@ const Navigation = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="px-2 py-2">
+              <div className="px-4 py-2 flex items-center justify-between gap-3">
+                <ThemeToggle />
                 <Button
                   onClick={() => scrollToSection('contact')}
-                  className="w-full bg-gradient-primary"
+                  className="flex-1 bg-gradient-primary"
                 >
                   Let's Talk
                 </Button>
