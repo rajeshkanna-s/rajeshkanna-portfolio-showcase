@@ -74,6 +74,11 @@ const aiRows: Skill[][] = [
     { name: 'Microsoft Copilot', icon: 'microsoft', color: '#5E5E5E' },
     { name: 'Meta AI', icon: 'meta', color: '#0081FB' },
     { name: 'Mistral AI', icon: 'mistral', color: '#FF7000' },
+    { name: 'Ollama', icon: 'ollama', color: '#000000' },
+    { name: 'GLM', icon: 'glm', color: '#2563EB' },
+    { name: 'GROK', icon: 'x', color: '#000000' },
+    { name: 'Codex', icon: 'openai', color: '#10A37F' },
+    { name: 'Gemini CLI', icon: 'googlegemini', color: '#8E75B2' },
   ],
 ];
 
