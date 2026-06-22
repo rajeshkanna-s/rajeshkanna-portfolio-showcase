@@ -123,6 +123,12 @@ const Contact = () => {
       link: 'mailto:rajeshkannaprogrammer@gmail.com'
     },
     {
+      icon: Mail,
+      title: 'Email',
+      content: 'contact@rajeshkanna.in',
+      link: 'mailto:contact@rajeshkanna.in'
+    },
+    {
       icon: Download,
       title: 'Resume',
       content: 'Download Resume',
