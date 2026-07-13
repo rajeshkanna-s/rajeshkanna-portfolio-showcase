@@ -17,68 +17,60 @@ const Footer = () => {
       <div className="absolute inset-0 bg-white/5 opacity-50"></div>
 
       <div className="section-container relative z-10">
-        <div className="py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-center text-center">
-            {/* Left - Brand */}
-            <div className="text-center md:text-left mb-4 md:mb-0">
-              <h3 className="text-2xl font-bold mb-2">Rajeshkanna S</h3>
-              <p className="text-white/80">Software Engineer & Freelance Web Developer</p>
+        <div className="py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left text-sm text-white/95">
+            {/* Left - Brand & Copyright */}
+            <div className="flex flex-col gap-0.5">
+              <h3 className="text-lg font-bold">Rajeshkanna S</h3>
+              <p className="text-white/80 text-xs">Software Engineer & Freelance Web Developer</p>
+              <p className="text-white/60 text-xs mt-1">
+                © {currentYear} Rajeshkanna S. All Rights Reserved.
+              </p>
             </div>
 
             {/* Center - Links */}
-            <div className="text-center mb-4 md:mb-0">
-              <div className="flex flex-wrap justify-center gap-6">
-                {[
-                  { id: 'about', label: 'About' },
-                  { id: 'services', label: 'Services' },
-                  { id: 'freelance-portfolio', label: 'Portfolio' },
-                  { id: 'experience', label: 'Experience' },
-                  { id: 'contact', label: 'Contact' },
-                ].map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => scrollToSection(item.id)}
-                    className="text-white/80 hover:text-white transition-colors"
-                  >
-                    {item.label}
-                  </button>
-                ))}
-              </div>
+            <div className="flex flex-wrap justify-center gap-5 text-sm font-medium">
+              {[
+                { id: 'about', label: 'About' },
+                { id: 'services', label: 'Services' },
+                { id: 'freelance-portfolio', label: 'Portfolio' },
+                { id: 'experience', label: 'Experience' },
+                { id: 'contact', label: 'Contact' },
+              ].map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className="hover:underline hover:text-white transition-colors text-white/90"
+                >
+                  {item.label}
+                </button>
+              ))}
             </div>
 
-            {/* Right - Scroll to Top */}
-            <div className="text-center md:text-right mb-2 md:mb-0">
+            {/* Right - Built by & Scroll to Top */}
+            <div className="flex flex-col md:items-end gap-2.5">
+              <p className="text-white/80 flex items-center justify-center md:justify-end gap-1.5 text-xs">
+                Built by{' '}
+                <a
+                  href="https://www.linkedin.com/in/rajeshkanna-s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:underline transition-colors font-medium"
+                >
+                  Rajeshkanna S
+                </a>
+                {' '}with{' '}
+                <Heart className="h-3 w-3 text-red-300 fill-current" />
+              </p>
+
               <button
                 onClick={scrollToTop}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-white/60 text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-blue-600 transition-all duration-300 hover:scale-105 font-medium text-sm"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-white/30 text-white bg-white/10 backdrop-blur-sm hover:bg-white hover:text-blue-600 transition-all duration-300 font-medium text-xs hover:scale-105"
               >
-                <ArrowUp className="h-4 w-4" />
+                <ArrowUp className="h-3.5 w-3.5" />
                 Back to Top
               </button>
             </div>
-          </div>
-
-          {/* Divider */}
-          <div className="border-t border-white/20 my-8"></div>
-
-          {/* Bottom */}
-          <div className="text-center">
-            <p className="text-white/80 flex items-center justify-center gap-2">
-              Built by{' '}
-              <a
-                href="https://www.linkedin.com/in/rajeshkanna-s"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-blue-200 transition-colors font-medium"
-              >
-                Rajeshkanna S
-              </a>
-              {' '}with{' '}
-              <Heart className="h-4 w-4 text-red-300 fill-current" />
-            </p>
-            <p className="text-white/60 text-sm mt-2">
-              © {currentYear} Rajeshkanna S. All Rights Reserved.
-            </p>
           </div>
         </div>
       </div>

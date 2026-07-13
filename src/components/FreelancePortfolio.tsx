@@ -16,6 +16,10 @@ const FreelancePortfolio = () => {
         { title: 'MuseBeauty', industry: 'Beauty Salon', url: 'https://musebeauty.netlify.app/', color: 'from-rose-400 to-pink-500' },
         { title: 'La Bella Casa', industry: 'Interior Design', url: 'https://labellacasa.netlify.app/', color: 'from-yellow-400 to-amber-500' },
         { title: 'Loves Connect', industry: 'Matchmaking', url: 'https://loves-connect.netlify.app/', color: 'from-red-400 to-rose-500' },
+        { title: 'Natarajan Wood Carvings', industry: 'Traditional Wooden Art', url: 'https://natarajanwoodcarvings.in/', color: 'from-amber-800 to-amber-950' },
+        { title: 'FlexFit Club', industry: 'Premium Gym & Fitness Club', url: 'https://flexfitclub.netlify.app/', color: 'from-zinc-800 to-slate-900' },
+        { title: 'NoraPixel', industry: 'Creative Agency Portfolio', url: 'https://norapixel.netlify.app/', color: 'from-violet-600 to-indigo-600' },
+        { title: 'El Shaddai Woods', industry: 'Premium Wooden Doors & Windows Manufacturer', url: 'https://elshaddaiwoods.netlify.app/', color: 'from-yellow-700 to-amber-800' },
     ];
 
     const professionalProjects = [
@@ -33,6 +37,7 @@ const FreelancePortfolio = () => {
     const toolProjects = [
         { title: 'Expense Tracker', industry: 'Finance Tool', url: 'https://exptkr.netlify.app/', color: 'from-green-500 to-emerald-600' },
         { title: 'RestoBills', industry: 'Restaurant Billing', url: 'https://restobills.netlify.app/', color: 'from-orange-500 to-red-500' },
+        { title: 'WoodCalc', industry: 'Wooden Box Cost Calculator', url: 'https://woodcalc.netlify.app/', color: 'from-amber-700 to-orange-600' },
     ];
 
     const ProjectCard = ({ project }: { project: { title: string; industry: string; url: string; color: string } }) => {

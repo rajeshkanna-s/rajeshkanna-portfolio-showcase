@@ -1,4 +1,7 @@
-import { ExternalLink, Globe, Calculator, Rocket } from 'lucide-react';
+import {
+  ExternalLink, Globe, Calculator, Rocket, Dumbbell, TrendingUp, Scale, Receipt, Cpu, Map, Users,
+  Car, Megaphone, Link, PiggyBank, Heart, Terminal, BookOpen, Wand2, Gift
+} from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -37,13 +40,44 @@ const Projects = () => {
     {
       title: 'ZezhaSchool',
       description: 'An innovative educational platform designed to make learning accessible and engaging for students.',
-      url: null, // Coming Soon
+      url: 'https://zezhaschool.netlify.app/',
       color: 'from-pink-500 to-rose-600',
-      comingSoon: true,
     },
   ];
 
   const toolProjects = [
+    {
+      title: 'AI Prompt Generator',
+      description: 'Advanced prompt engineering helper generating optimized prompts for ChatGPT, Midjourney, and Claude.',
+      url: 'https://promptcrafty.netlify.app/',
+      technologies: ['React', 'Prompt Engineering Models', 'Copy APIs'],
+      color: 'from-violet-600 to-blue-600',
+      icon: Wand2,
+    },
+    {
+      title: 'Wish Craft',
+      description: 'AI-enabled digital invitation card creator for weddings, birthdays, and corporate events.',
+      url: 'https://wishcrafty.lovable.app/',
+      technologies: ['React', 'Canvas API', 'Image Generation'],
+      color: 'from-pink-500 to-purple-600',
+      icon: Gift,
+    },
+    {
+      title: 'AI Explained Smart Bible',
+      description: 'AI-powered scripture reading platform offering dynamic context, translations, and explanations.',
+      url: 'https://smartbible.netlify.app/',
+      technologies: ['React', 'Bible APIs', 'Gemini API'],
+      color: 'from-amber-600 to-yellow-700',
+      icon: BookOpen,
+    },
+    {
+      title: 'AI Engineer Roadmap',
+      description: 'Interactive visual roadmap detailing learning pathways and resources to become an AI Engineer.',
+      url: 'https://aiengineerrdmap.netlify.app/',
+      technologies: ['React', 'Mermaid.js', 'Tailwind CSS', 'PWA'],
+      color: 'from-blue-600 to-cyan-500',
+      icon: Map,
+    },
     {
       title: 'ParkingMate',
       description: 'A smart parking management system that helps users find and book parking spaces efficiently with real-time availability tracking.',
@@ -72,7 +106,102 @@ const Projects = () => {
       technologies: ['TypeScript', 'JSON Processing', 'Web APIs'],
       url: 'https://zezhatools.lovable.app/',
     },
-
+    {
+      title: 'AI Fitness Advisor',
+      description: 'Personalized AI-powered fitness and workout planning assistant tailored to individual user goals.',
+      url: 'https://fitness-advisor.netlify.app/',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'AI APIs'],
+      color: 'from-emerald-500 to-teal-600',
+      icon: Dumbbell,
+    },
+    {
+      title: 'AI Financial Planner',
+      description: 'Intelligent budgeting, investment suggestion, and financial planning advisor driven by AI.',
+      url: 'https://ai-fin-advisor.netlify.app/',
+      technologies: ['React', 'FinTech APIs', 'Gemini API', 'Recharts'],
+      color: 'from-green-600 to-emerald-700',
+      icon: TrendingUp,
+    },
+    {
+      title: 'Fitness & BMI Tool',
+      description: 'An advanced calculator for BMI, body fat percentage, daily calorie needs, and health metrics.',
+      url: 'https://fits5.netlify.app/',
+      technologies: ['React', 'Vite', 'Tailwind CSS', 'Responsive UI'],
+      color: 'from-teal-400 to-cyan-600',
+      icon: Scale,
+    },
+    {
+      title: 'Restaurant Billing App',
+      description: 'Streamlined billing, table management, and digital invoice generation platform for restaurants.',
+      url: 'https://restobills.netlify.app/',
+      technologies: ['React', 'Vite', 'LocalStorage', 'PDF Export'],
+      color: 'from-orange-500 to-amber-600',
+      icon: Receipt,
+    },
+    {
+      title: 'RAG AI Support Suite',
+      description: 'Retrieval-Augmented Generation chatbot system for smart customer support and document analysis.',
+      url: 'https://ragsupportsuite.netlify.app/',
+      technologies: ['React', 'Node.js', 'Vector DB', 'LangChain'],
+      color: 'from-indigo-600 to-purple-700',
+      icon: Cpu,
+    },
+    {
+      title: 'Tamil Nadu Developer Hub',
+      description: 'Community hub and platform connecting developers across Tamil Nadu for collaboration and jobs.',
+      url: 'https://tamilnadudev.netlify.app/',
+      technologies: ['React', 'Community APIs', 'Tailwind CSS'],
+      color: 'from-red-500 to-orange-600',
+      icon: Users,
+    },
+    {
+      title: 'Fintech & Automotive',
+      description: 'Integrated platform offering automotive financing calculator and vehicle management solutions.',
+      url: 'https://fintechautomative.netlify.app/',
+      technologies: ['React', 'FinTech APIs', 'Custom Algorithms'],
+      color: 'from-slate-700 to-slate-900',
+      icon: Car,
+    },
+    {
+      title: 'AI Marketing Content Engine',
+      description: 'Generative AI tool for automated copywriting, social media post creation, and marketing campaigns.',
+      url: 'https://aimarketingengine.netlify.app/',
+      technologies: ['React', 'OpenAI API', 'Copy-to-Clipboard API'],
+      color: 'from-rose-500 to-pink-600',
+      icon: Megaphone,
+    },
+    {
+      title: 'Bio & Link Builder',
+      description: 'Create highly customizable personal bio landing pages with links, social media integration, and analytics.',
+      url: 'https://mybiofolio.netlify.app/',
+      technologies: ['React', 'Supabase', 'Drag-and-Drop UI', 'Analytics'],
+      color: 'from-violet-500 to-fuchsia-600',
+      icon: Link,
+    },
+    {
+      title: 'Expense Tracker',
+      description: 'Simple, elegant, and secure daily expense tracker with category-wise analysis and visual graphs.',
+      url: 'https://exptkr.netlify.app/',
+      technologies: ['React', 'Recharts', 'LocalStorage'],
+      color: 'from-red-400 to-rose-600',
+      icon: PiggyBank,
+    },
+    {
+      title: 'Daily Fitness & Health',
+      description: 'Comprehensive suite of daily workout trackers, water intake logs, and macronutrient calculators.',
+      url: 'https://dfits.netlify.app/',
+      technologies: ['React', 'Tailwind CSS', 'Charts'],
+      color: 'from-emerald-400 to-green-600',
+      icon: Heart,
+    },
+    {
+      title: 'AI APIs Explorer',
+      description: 'Interactive playground for developers to test and integrate various artificial intelligence APIs.',
+      url: 'https://aiapiss.netlify.app/',
+      technologies: ['React', 'Monaco Editor', 'REST Clients'],
+      color: 'from-indigo-500 to-indigo-800',
+      icon: Terminal,
+    },
   ];
 
   return (
@@ -186,14 +315,50 @@ const Projects = () => {
               <Card key={index} className="glass-card hover-lift group overflow-hidden cursor-pointer"
                 onClick={() => window.open(project.url, '_blank')}
               >
-                {/* Project Image */}
-                <div className="relative h-48 sm:h-56 overflow-hidden bg-gray-100 dark:bg-gray-800">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
+                {/* Project Live Preview or Image */}
+                <div className="relative overflow-hidden bg-gray-100 dark:bg-gray-800" style={{ height: '220px' }}>
+                  {project.image ? (
+                    <>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
+                    </>
+                  ) : (
+                    <>
+                      {/* Gradient & Icon background fallback shown while iframe loads */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${project.color || 'from-blue-500 to-indigo-600'} flex flex-col items-center justify-center p-6 text-center text-white opacity-40`}>
+                        {project.icon ? (
+                          <project.icon className="h-12 w-12 text-white/95 mb-3 group-hover:scale-110 transition-transform duration-300" />
+                        ) : (
+                          <Globe className="h-12 w-12 text-white/95 mb-3 group-hover:scale-110 transition-transform duration-300" />
+                        )}
+                        <span className="font-bold text-sm tracking-wider uppercase opacity-90">{project.title}</span>
+                      </div>
+
+                      {/* Live Iframe Preview */}
+                      {project.url && (
+                        <iframe
+                          src={project.url}
+                          title={project.title}
+                          className="absolute top-0 left-0 border-0 pointer-events-none w-full h-full z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                          style={{
+                            width: '1280px',
+                            height: '900px',
+                            transform: 'scale(0.42)',
+                            transformOrigin: 'top left',
+                          }}
+                          loading="lazy"
+                          sandbox="allow-scripts allow-same-origin"
+                        />
+                      )}
+                      
+                      {/* Overlay to intercept hover events and show overlay */}
+                      <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-all duration-300 z-20"></div>
+                    </>
+                  )}
                 </div>
 
                 <CardContent className="p-4 sm:p-5 space-y-3">
@@ -239,7 +404,7 @@ const Projects = () => {
             <CardContent className="p-4 sm:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">20+</div>
+                  <div className="text-3xl font-bold text-gradient mb-2">50+</div>
                   <div className="text-muted-foreground">Active Projects</div>
                 </div>
                 <div className="text-center">

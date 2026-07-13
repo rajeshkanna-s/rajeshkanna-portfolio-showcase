@@ -123,12 +123,6 @@ const Contact = () => {
       link: 'mailto:rajeshkannaprogrammer@gmail.com'
     },
     {
-      icon: Mail,
-      title: 'Email',
-      content: 'contact@rajeshkanna.in',
-      link: 'mailto:contact@rajeshkanna.in'
-    },
-    {
       icon: Download,
       title: 'Resume',
       content: 'Download Resume',
@@ -137,7 +131,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+91 ',
+      content: '+91 86674 54755',
       link: 'tel:+918667454755'
     },
     {
