@@ -97,7 +97,7 @@ const Projects = () => {
       description: 'Create beautiful invoices in seconds with a professional, easy-to-use invoice creation tool.',
       image: '/lovable-uploads/invoicegen.png',
       technologies: ['TypeScript', 'PDF Generation', 'Responsive Design'],
-      url: 'https://myinv.lovable.app/',
+      url: 'https://inv-c.netlify.app/',
     },
     {
       title: 'Resume Builder',
