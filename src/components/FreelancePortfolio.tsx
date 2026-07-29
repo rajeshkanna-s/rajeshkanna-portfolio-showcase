@@ -42,13 +42,13 @@ const FreelancePortfolio = () => {
 
     const ProjectCard = ({ project }: { project: { title: string; industry: string; url: string; color: string } }) => {
         return (
-            <Card className="glass-card hover-lift group overflow-hidden cursor-pointer"
+            <Card className="glass-card hover-lift group overflow-hidden cursor-pointer flex flex-col"
                 onClick={() => window.open(project.url, '_blank')}
             >
                 {/* Live Iframe Preview */}
                 <div
                     className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800"
-                    style={{ height: '220px' }}
+                    style={{ height: '180px' }}
                 >
                     {/* Gradient fallback background */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20`} />
@@ -60,7 +60,7 @@ const FreelancePortfolio = () => {
                         style={{
                             width: '1280px',
                             height: '900px',
-                            transform: 'scale(0.42)',
+                            transform: 'scale(0.26)',
                             transformOrigin: 'top left',
                         }}
                         loading="lazy"
@@ -69,39 +69,37 @@ const FreelancePortfolio = () => {
 
                     {/* Hover overlay */}
                     <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center z-10">
-                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-slate-800/90 text-foreground px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm">
-                            <ExternalLink className="h-4 w-4 inline mr-1.5 -mt-0.5" />
+                        <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-slate-800/90 text-foreground px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg backdrop-blur-sm">
+                            <ExternalLink className="h-3.5 w-3.5 inline mr-1 -mt-0.5" />
                             View Live Site
                         </span>
                     </div>
 
                     {/* Industry badge */}
-                    <div className="absolute top-3 right-3 z-20">
-                        <span className={`px-3 py-1.5 bg-gradient-to-r ${project.color} text-white text-xs font-semibold rounded-full shadow-lg`}>
+                    <div className="absolute top-2.5 right-2.5 z-20">
+                        <span className={`px-2.5 py-1 bg-gradient-to-r ${project.color} text-white text-[11px] font-semibold rounded-full shadow-lg`}>
                             {project.industry}
                         </span>
                     </div>
                 </div>
 
                 {/* Card Footer */}
-                <CardContent className="p-4 sm:p-5">
-                    <div className="flex items-center justify-between">
-                        <div>
-                            <h3 className="font-bold text-foreground text-lg group-hover:text-primary transition-colors">
-                                {project.title}
-                            </h3>
-                            <p className="text-muted-foreground text-sm mt-0.5">{project.industry}</p>
-                        </div>
-                        <Button
-                            variant="outline"
-                            size="sm"
-                            className="hover:bg-primary hover:text-white transition-all font-semibold"
-                            onClick={(e) => { e.stopPropagation(); window.open(project.url, '_blank'); }}
-                        >
-                            <ExternalLink className="h-4 w-4 mr-1.5" />
-                            View Site
-                        </Button>
+                <CardContent className="p-4 flex flex-col flex-1 justify-between space-y-3">
+                    <div>
+                        <h3 className="font-bold text-foreground text-base group-hover:text-primary transition-colors line-clamp-1">
+                            {project.title}
+                        </h3>
+                        <p className="text-muted-foreground text-xs sm:text-sm mt-0.5">{project.industry}</p>
                     </div>
+                    <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full hover:bg-primary hover:text-white transition-all font-semibold text-xs h-8"
+                        onClick={(e) => { e.stopPropagation(); window.open(project.url, '_blank'); }}
+                    >
+                        <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                        View Site
+                    </Button>
                 </CardContent>
             </Card>
         );
@@ -119,7 +117,7 @@ const FreelancePortfolio = () => {
 
     return (
         <section id="freelance-portfolio" className="section-padding bg-gradient-to-b from-background to-accent/30">
-            <div className="section-container">
+            <div className="section-container max-w-[1400px]">
                 {/* Section Title */}
                 <div className="text-center mb-12 sm:mb-16">
                     <div className="inline-block px-4 py-1.5 bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm font-semibold rounded-full mb-4">
@@ -136,7 +134,7 @@ const FreelancePortfolio = () => {
                 {/* ===== Business Portfolio ===== */}
                 <div className="mb-16">
                     <SectionHeader icon={Briefcase} title="Business Portfolio" count={businessProjects.length} />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
                         {businessProjects.map((project, index) => (
                             <ProjectCard key={`biz-${index}`} project={project} />
                         ))}
@@ -146,7 +144,7 @@ const FreelancePortfolio = () => {
                 {/* ===== Professional Portfolio ===== */}
                 <div className="mb-16">
                     <SectionHeader icon={User} title="Professional Portfolio" count={professionalProjects.length} />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
                         {professionalProjects.map((project, index) => (
                             <ProjectCard key={`prof-${index}`} project={project} />
                         ))}
@@ -156,7 +154,7 @@ const FreelancePortfolio = () => {
                 {/* ===== Business Tools ===== */}
                 <div className="mb-10">
                     <SectionHeader icon={Wrench} title="Business Tools" count={toolProjects.length} />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
                         {toolProjects.map((project, index) => (
                             <ProjectCard key={`tool-${index}`} project={project} />
                         ))}
