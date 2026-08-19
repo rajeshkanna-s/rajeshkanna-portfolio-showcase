@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zezha.in/sitemap.xml
+Sitemap: https://rajeshkanna.in/sitemap.xml
