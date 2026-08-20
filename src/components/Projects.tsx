@@ -1,56 +1,98 @@
 import {
-  ExternalLink, Globe, Calculator, Rocket, Dumbbell, TrendingUp, Scale, Receipt, Cpu, Map, Users,
-  Car, Megaphone, Link, PiggyBank, Heart, Terminal, BookOpen, Wand2, Gift
+  ExternalLink,
+  Globe,
+  Calculator,
+  Wand2,
+  Gift,
+  BookOpen,
+  Map,
+  Dumbbell,
+  TrendingUp,
+  Scale,
+  Receipt,
+  Cpu,
+  Users,
+  Car,
+  Megaphone,
+  Link,
+  PiggyBank,
+  Heart,
+  Terminal,
 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
+interface MainProject {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+  color: string;
+}
+
+interface ToolProject {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+  technologies: string[];
+  color: string;
+  icon: any;
+}
+
 const Projects = () => {
-  const mainProjects = [
+  const mainProjects: MainProject[] = [
     {
       title: 'Zezha',
       description: 'A comprehensive digital platform offering modern solutions for businesses and individuals.',
       url: 'https://zezha.in',
+      image: '/screenshots/zezha.webp',
       color: 'from-blue-500 to-indigo-600',
     },
     {
       title: 'HealthyPlates',
       description: 'A healthy eating platform helping users discover nutritious recipes and meal plans for a healthier lifestyle.',
       url: 'https://healthyplates.in',
+      image: '/screenshots/healthyplates.webp',
       color: 'from-green-500 to-emerald-600',
     },
     {
       title: 'ZezhaTools',
       description: 'A comprehensive web platform featuring multiple utility tools and calculators for various business and personal needs.',
       url: 'https://zezhatools.com',
+      image: '/screenshots/zezhatools.webp',
       color: 'from-purple-500 to-violet-600',
     },
     {
       title: 'ZezhaTalent',
       description: 'A talent discovery and recruitment platform connecting skilled professionals with the right opportunities.',
       url: 'https://zezhatalent.in',
+      image: '/screenshots/zezhatalent.webp',
       color: 'from-orange-500 to-amber-600',
     },
     {
       title: 'ReportsIQ',
       description: 'An intelligent reporting and analytics platform for data-driven business insights and decision making.',
       url: 'https://reportsiq.in',
+      image: '/screenshots/reportsiq.webp',
       color: 'from-cyan-500 to-blue-600',
     },
     {
       title: 'ZezhaSchool',
       description: 'An innovative educational platform designed to make learning accessible and engaging for students.',
       url: 'https://zezhaschool.netlify.app/',
+      image: '/screenshots/zezhaschool.webp',
       color: 'from-pink-500 to-rose-600',
     },
   ];
 
-  const toolProjects = [
+  const toolProjects: ToolProject[] = [
     {
       title: 'AI Prompt Generator',
       description: 'Advanced prompt engineering helper generating optimized prompts for ChatGPT, Midjourney, and Claude.',
       url: 'https://promptcrafty.netlify.app/',
-      technologies: ['React', 'Prompt Engineering Models', 'Copy APIs'],
+      image: '/screenshots/promptcrafty.webp',
+      technologies: ['React', 'Prompt Engineering', 'AI APIs'],
       color: 'from-violet-600 to-blue-600',
       icon: Wand2,
     },
@@ -58,6 +100,7 @@ const Projects = () => {
       title: 'Wish Craft',
       description: 'AI-enabled digital invitation card creator for weddings, birthdays, and corporate events.',
       url: 'https://wishcrafty.lovable.app/',
+      image: '/screenshots/wishcrafty.webp',
       technologies: ['React', 'Canvas API', 'Image Generation'],
       color: 'from-pink-500 to-purple-600',
       icon: Gift,
@@ -66,6 +109,7 @@ const Projects = () => {
       title: 'AI Explained Smart Bible',
       description: 'AI-powered scripture reading platform offering dynamic context, translations, and explanations.',
       url: 'https://smartbible.netlify.app/',
+      image: '/screenshots/smartbible.webp',
       technologies: ['React', 'Bible APIs', 'Gemini API'],
       color: 'from-amber-600 to-yellow-700',
       icon: BookOpen,
@@ -74,42 +118,52 @@ const Projects = () => {
       title: 'AI Engineer Roadmap',
       description: 'Interactive visual roadmap detailing learning pathways and resources to become an AI Engineer.',
       url: 'https://aiengineerrdmap.netlify.app/',
+      image: '/screenshots/aiengineerrdmap.webp',
       technologies: ['React', 'Mermaid.js', 'Tailwind CSS', 'PWA'],
       color: 'from-blue-600 to-cyan-500',
       icon: Map,
     },
     {
       title: 'ParkingMate',
-      description: 'A smart parking management system that helps users find and book parking spaces efficiently with real-time availability tracking.',
-      image: '/lovable-uploads/parkingmate.png',
-      technologies: ['React', 'Node.js', 'Supabase', 'Real-time APIs'],
+      description: 'A smart parking management system that helps users find and book parking spaces efficiently with real-time tracking.',
       url: 'https://parkingmate.netlify.app/',
+      image: '/screenshots/parkingmate.webp',
+      technologies: ['React', 'Node.js', 'Supabase', 'Real-time APIs'],
+      color: 'from-blue-500 to-indigo-600',
+      icon: Globe,
     },
     {
       title: 'TAX Calculator Compare',
       description: 'A collection of specialized calculators including scientific, financial, and statistical calculation tools.',
-      image: '/lovable-uploads/taxcompare.png',
-      technologies: ['TypeScript', 'Mathematical Libraries', 'Responsive Design', 'PWA'],
       url: 'https://zezhatools.com/taxcompare-calculator',
+      image: '/screenshots/taxcompare.webp',
+      technologies: ['TypeScript', 'Math Libs', 'Responsive UI', 'PWA'],
+      color: 'from-teal-500 to-emerald-600',
+      icon: Calculator,
     },
     {
       title: 'Invoice Generator',
       description: 'Create beautiful invoices in seconds with a professional, easy-to-use invoice creation tool.',
-      image: '/lovable-uploads/invoicegen.png',
-      technologies: ['TypeScript', 'PDF Generation', 'Responsive Design'],
       url: 'https://inv-c.netlify.app/',
+      image: '/screenshots/invoicegen.webp',
+      technologies: ['TypeScript', 'PDF Generation', 'Responsive Design'],
+      color: 'from-emerald-500 to-teal-600',
+      icon: Receipt,
     },
     {
       title: 'Resume Builder',
       description: 'Create your perfect resume in minutes with professionally designed templates and easy customization.',
-      image: '/lovable-uploads/resumebuilder.png',
-      technologies: ['TypeScript', 'JSON Processing', 'Web APIs'],
       url: 'https://zezhatools.lovable.app/',
+      image: '/screenshots/resumebuilder.webp',
+      technologies: ['TypeScript', 'JSON Processing', 'Web APIs'],
+      color: 'from-indigo-500 to-purple-600',
+      icon: Globe,
     },
     {
       title: 'AI Fitness Advisor',
       description: 'Personalized AI-powered fitness and workout planning assistant tailored to individual user goals.',
       url: 'https://fitness-advisor.netlify.app/',
+      image: '/screenshots/fitnessadvisor.webp',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'AI APIs'],
       color: 'from-emerald-500 to-teal-600',
       icon: Dumbbell,
@@ -118,6 +172,7 @@ const Projects = () => {
       title: 'AI Financial Planner',
       description: 'Intelligent budgeting, investment suggestion, and financial planning advisor driven by AI.',
       url: 'https://ai-fin-advisor.netlify.app/',
+      image: '/screenshots/aifinadvisor.webp',
       technologies: ['React', 'FinTech APIs', 'Gemini API', 'Recharts'],
       color: 'from-green-600 to-emerald-700',
       icon: TrendingUp,
@@ -126,6 +181,7 @@ const Projects = () => {
       title: 'Fitness & BMI Tool',
       description: 'An advanced calculator for BMI, body fat percentage, daily calorie needs, and health metrics.',
       url: 'https://fits5.netlify.app/',
+      image: '/screenshots/fits5.webp',
       technologies: ['React', 'Vite', 'Tailwind CSS', 'Responsive UI'],
       color: 'from-teal-400 to-cyan-600',
       icon: Scale,
@@ -134,6 +190,7 @@ const Projects = () => {
       title: 'Restaurant Billing App',
       description: 'Streamlined billing, table management, and digital invoice generation platform for restaurants.',
       url: 'https://restobills.netlify.app/',
+      image: '/screenshots/restobills.webp',
       technologies: ['React', 'Vite', 'LocalStorage', 'PDF Export'],
       color: 'from-orange-500 to-amber-600',
       icon: Receipt,
@@ -142,6 +199,7 @@ const Projects = () => {
       title: 'RAG AI Support Suite',
       description: 'Retrieval-Augmented Generation chatbot system for smart customer support and document analysis.',
       url: 'https://ragsupportsuite.netlify.app/',
+      image: '/screenshots/ragsupportsuite.webp',
       technologies: ['React', 'Node.js', 'Vector DB', 'LangChain'],
       color: 'from-indigo-600 to-purple-700',
       icon: Cpu,
@@ -150,6 +208,7 @@ const Projects = () => {
       title: 'Tamil Nadu Developer Hub',
       description: 'Community hub and platform connecting developers across Tamil Nadu for collaboration and jobs.',
       url: 'https://tamilnadudev.netlify.app/',
+      image: '/screenshots/tamilnadudev.webp',
       technologies: ['React', 'Community APIs', 'Tailwind CSS'],
       color: 'from-red-500 to-orange-600',
       icon: Users,
@@ -158,6 +217,7 @@ const Projects = () => {
       title: 'Fintech & Automotive',
       description: 'Integrated platform offering automotive financing calculator and vehicle management solutions.',
       url: 'https://fintechautomative.netlify.app/',
+      image: '/screenshots/fintechautomative.webp',
       technologies: ['React', 'FinTech APIs', 'Custom Algorithms'],
       color: 'from-slate-700 to-slate-900',
       icon: Car,
@@ -166,7 +226,8 @@ const Projects = () => {
       title: 'AI Marketing Content Engine',
       description: 'Generative AI tool for automated copywriting, social media post creation, and marketing campaigns.',
       url: 'https://aimarketingengine.netlify.app/',
-      technologies: ['React', 'OpenAI API', 'Copy-to-Clipboard API'],
+      image: '/screenshots/aimarketingengine.webp',
+      technologies: ['React', 'OpenAI API', 'Clipboard API'],
       color: 'from-rose-500 to-pink-600',
       icon: Megaphone,
     },
@@ -174,7 +235,8 @@ const Projects = () => {
       title: 'Bio & Link Builder',
       description: 'Create highly customizable personal bio landing pages with links, social media integration, and analytics.',
       url: 'https://mybiofolio.netlify.app/',
-      technologies: ['React', 'Supabase', 'Drag-and-Drop UI', 'Analytics'],
+      image: '/screenshots/mybiofolio.webp',
+      technologies: ['React', 'Supabase', 'Drag & Drop', 'Analytics'],
       color: 'from-violet-500 to-fuchsia-600',
       icon: Link,
     },
@@ -182,6 +244,7 @@ const Projects = () => {
       title: 'Expense Tracker',
       description: 'Simple, elegant, and secure daily expense tracker with category-wise analysis and visual graphs.',
       url: 'https://exptkr.netlify.app/',
+      image: '/screenshots/exptkr.webp',
       technologies: ['React', 'Recharts', 'LocalStorage'],
       color: 'from-red-400 to-rose-600',
       icon: PiggyBank,
@@ -190,6 +253,7 @@ const Projects = () => {
       title: 'Daily Fitness & Health',
       description: 'Comprehensive suite of daily workout trackers, water intake logs, and macronutrient calculators.',
       url: 'https://dfits.netlify.app/',
+      image: '/screenshots/dfits.webp',
       technologies: ['React', 'Tailwind CSS', 'Charts'],
       color: 'from-emerald-400 to-green-600',
       icon: Heart,
@@ -198,6 +262,7 @@ const Projects = () => {
       title: 'AI APIs Explorer',
       description: 'Interactive playground for developers to test and integrate various artificial intelligence APIs.',
       url: 'https://aiapiss.netlify.app/',
+      image: '/screenshots/aiapiss.webp',
       technologies: ['React', 'Monaco Editor', 'REST Clients'],
       color: 'from-indigo-500 to-indigo-800',
       icon: Terminal,
@@ -207,6 +272,7 @@ const Projects = () => {
   return (
     <section id="projects" className="section-padding bg-background">
       <div className="section-container max-w-[1400px]">
+        {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-block px-4 py-1.5 bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm font-semibold rounded-full mb-4">
             My Products
@@ -219,207 +285,250 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* ===== Main Projects with Iframe Previews ===== */}
+        {/* ===== Main Projects Section ===== */}
         <div className="mb-14">
           <div className="flex items-center gap-3 mb-8">
-            <div className="p-2.5 bg-gradient-primary rounded-xl">
+            <div className="p-2.5 bg-gradient-primary rounded-xl shadow-sm">
               <Globe className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-foreground">My Platforms</h3>
-            <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-bold rounded-full">{mainProjects.length}</span>
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground">My Platforms</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Full-scale web applications & digital platforms
+              </p>
+            </div>
+            <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-bold rounded-full ml-auto sm:ml-0">
+              {mainProjects.length}
+            </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-            {mainProjects.map((project, index) => (
-              <Card
-                key={index}
-                className={`glass-card hover-lift group overflow-hidden flex flex-col ${project.comingSoon ? '' : 'cursor-pointer'}`}
-                onClick={() => !project.comingSoon && project.url && window.open(project.url, '_blank')}
-              >
-                {/* Live Preview or Coming Soon */}
-                <div
-                  className="relative w-full overflow-hidden bg-gray-100 dark:bg-gray-800"
-                  style={{ height: '200px' }}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
+            {mainProjects.map((project, index) => {
+              const displayUrl = project.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+              return (
+                <Card
+                  key={index}
+                  onClick={() => window.open(project.url, '_blank')}
+                  className="glass-card hover-lift group overflow-hidden flex flex-col border border-border/80 hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg bg-card cursor-pointer"
                 >
-                  {project.comingSoon ? (
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} flex flex-col items-center justify-center p-4 text-center`}>
-                      <Rocket className="h-10 w-10 text-white/80 mb-2 animate-bounce" />
-                      <span className="text-white text-lg font-bold">Coming Soon</span>
-                      <span className="text-white/70 text-xs mt-1">Currently in Development</span>
+                  {/* Browser Window Header */}
+                  <div className="bg-slate-900 px-3 py-2 border-b border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block"></span>
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
                     </div>
-                  ) : (
-                    <>
-                      <iframe
-                        src={project.url!}
-                        title={project.title}
-                        className="absolute top-0 left-0 border-0 pointer-events-none"
-                        style={{
-                          width: '1280px',
-                          height: '900px',
-                          transform: 'scale(0.26)',
-                          transformOrigin: 'top left',
-                        }}
-                        loading="lazy"
-                        sandbox="allow-scripts allow-same-origin"
-                      />
-                      <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-all duration-300 z-10"></div>
-                    </>
-                  )}
-
-                  {/* Badge */}
-                  <div className="absolute top-2.5 right-2.5 z-20">
-                    <span className={`px-2.5 py-1 bg-gradient-to-r ${project.color} text-white text-[11px] font-semibold rounded-full shadow-lg`}>
-                      {project.comingSoon ? '🚧 Developing' : '🌐 Live'}
+                    <span className="text-[11px] font-mono text-slate-400 truncate max-w-[130px]">
+                      {displayUrl}
                     </span>
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                   </div>
-                </div>
 
-                <CardContent className="p-4 flex flex-col flex-1 justify-between space-y-3">
-                  <div>
-                    <h3 className="font-bold text-foreground text-base group-hover:text-primary transition-colors line-clamp-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-xs sm:text-sm mt-1 leading-relaxed line-clamp-2">{project.description}</p>
+                  {/* Real Website Snapshot Visual */}
+                  <div className="relative w-full h-[190px] overflow-hidden bg-slate-950">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity"></div>
+
+                    {/* Hover Visit Link Overlay */}
+                    <div className="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[1px] z-10">
+                      <span className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold shadow-lg flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        Visit Website
+                      </span>
+                    </div>
+
+                    {/* Live Badge */}
+                    <div className="absolute top-2.5 right-2.5 z-20 pointer-events-none">
+                      <span className="px-2 py-0.5 bg-slate-950/70 backdrop-blur-md text-white text-[10px] font-semibold rounded-full border border-white/20 flex items-center gap-1 shadow-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                        Live
+                      </span>
+                    </div>
                   </div>
-                  {!project.comingSoon && project.url && (
+
+                  {/* Card Content & Action Button */}
+                  <CardContent className="p-4 flex flex-col flex-1 justify-between space-y-3">
+                    <div>
+                      <h4 className="font-bold text-foreground text-base group-hover:text-primary transition-colors line-clamp-1">
+                        {project.title}
+                      </h4>
+                      <p className="text-muted-foreground text-xs sm:text-sm mt-1 leading-relaxed line-clamp-2">
+                        {project.description}
+                      </p>
+                    </div>
+
                     <div className="pt-1">
                       <Button
-                        variant="outline"
+                        variant="default"
                         size="sm"
-                        className="w-full hover:bg-primary hover:text-white transition-all font-semibold text-xs h-8"
-                        onClick={(e) => { e.stopPropagation(); window.open(project.url!, '_blank'); }}
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all font-semibold text-xs h-8 gap-1.5 shadow-sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.url, '_blank');
+                        }}
                       >
-                        <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
+                        <ExternalLink className="h-3.5 w-3.5" />
                         Visit Site
                       </Button>
                     </div>
-                  )}
-                </CardContent>
-              </Card>
-            ))}
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
-        {/* ===== Tool Projects ===== */}
+        {/* ===== Tool Projects Section ===== */}
         <div>
           <div className="flex items-center gap-3 mb-8">
-            <div className="p-2.5 bg-gradient-primary rounded-xl">
+            <div className="p-2.5 bg-gradient-primary rounded-xl shadow-sm">
               <Calculator className="h-6 w-6 text-white" />
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-foreground">Tools & Utilities</h3>
-            <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-bold rounded-full">{toolProjects.length}</span>
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground">Tools & Utilities</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground">
+                Productivity apps, calculators, and AI assistants
+              </p>
+            </div>
+            <span className="px-3 py-1 bg-primary/10 text-primary text-sm font-bold rounded-full ml-auto sm:ml-0">
+              {toolProjects.length}
+            </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-            {toolProjects.map((project, index) => (
-              <Card key={index} className="glass-card hover-lift group overflow-hidden flex flex-col cursor-pointer"
-                onClick={() => window.open(project.url, '_blank')}
-              >
-                {/* Project Live Preview or Image */}
-                <div className="relative overflow-hidden bg-gray-100 dark:bg-gray-800" style={{ height: '180px' }}>
-                  {project.image ? (
-                    <>
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
-                    </>
-                  ) : (
-                    <>
-                      {/* Gradient & Icon background fallback shown while iframe loads */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${project.color || 'from-blue-500 to-indigo-600'} flex flex-col items-center justify-center p-4 text-center text-white opacity-40`}>
-                        {project.icon ? (
-                          <project.icon className="h-10 w-10 text-white/95 mb-2 group-hover:scale-110 transition-transform duration-300" />
-                        ) : (
-                          <Globe className="h-10 w-10 text-white/95 mb-2 group-hover:scale-110 transition-transform duration-300" />
-                        )}
-                        <span className="font-bold text-xs tracking-wider uppercase opacity-90">{project.title}</span>
-                      </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
+            {toolProjects.map((project, index) => {
+              const displayUrl = project.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
 
-                      {/* Live Iframe Preview */}
-                      {project.url && (
-                        <iframe
-                          src={project.url}
-                          title={project.title}
-                          className="absolute top-0 left-0 border-0 pointer-events-none w-full h-full z-10 opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-                          style={{
-                            width: '1280px',
-                            height: '900px',
-                            transform: 'scale(0.26)',
-                            transformOrigin: 'top left',
-                          }}
-                          loading="lazy"
-                          sandbox="allow-scripts allow-same-origin"
-                        />
-                      )}
-                      
-                      {/* Overlay to intercept hover events and show overlay */}
-                      <div className="absolute inset-0 bg-transparent group-hover:bg-black/10 transition-all duration-300 z-20"></div>
-                    </>
-                  )}
-                </div>
+              return (
+                <Card
+                  key={index}
+                  onClick={() => window.open(project.url, '_blank')}
+                  className="glass-card hover-lift group overflow-hidden flex flex-col border border-border/80 hover:border-primary/50 transition-all duration-300 shadow-sm hover:shadow-lg bg-card cursor-pointer"
+                >
+                  {/* Browser Window Header */}
+                  <div className="bg-slate-900 px-3 py-2 border-b border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block"></span>
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500 inline-block"></span>
+                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
+                    </div>
+                    <span className="text-[11px] font-mono text-slate-400 truncate max-w-[130px]">
+                      {displayUrl}
+                    </span>
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  </div>
 
-                <CardContent className="p-4 flex flex-col flex-1 justify-between space-y-2.5">
-                  <div className="space-y-2">
-                    <h3 className="font-bold text-foreground text-base group-hover:text-primary transition-colors line-clamp-1">
-                      {project.title}
-                    </h3>
-                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed line-clamp-2">
-                      {project.description}
-                    </p>
+                  {/* Real Website Snapshot Visual */}
+                  <div className="relative w-full h-[170px] overflow-hidden bg-slate-950">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      loading="lazy"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                    />
 
-                    {/* Technologies */}
-                    <div className="flex flex-wrap gap-1 pt-1">
-                      {project.technologies.map((tech, techIndex) => (
-                        <span
-                          key={techIndex}
-                          className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-medium rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition-opacity"></div>
+
+                    {/* Hover Visit Link Overlay */}
+                    <div className="absolute inset-0 bg-slate-950/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[1px] z-10">
+                      <span className="px-4 py-2 rounded-full bg-primary text-primary-foreground text-xs font-bold shadow-lg flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform">
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        Open Live Tool
+                      </span>
+                    </div>
+
+                    {/* Badge */}
+                    <div className="absolute top-2.5 right-2.5 z-20 pointer-events-none">
+                      <span className="px-2 py-0.5 bg-slate-950/70 backdrop-blur-md text-white text-[10px] font-semibold rounded-full border border-white/20 flex items-center gap-1 shadow-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                        Live
+                      </span>
                     </div>
                   </div>
 
-                  <div className="pt-1">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full hover:bg-primary hover:text-white transition-all font-semibold text-xs h-8"
-                      onClick={(e) => { e.stopPropagation(); window.open(project.url, '_blank'); }}
-                    >
-                      <ExternalLink className="h-3.5 w-3.5 mr-1.5" />
-                      Live Demo
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  {/* Card Content & Action Button */}
+                  <CardContent className="p-4 flex flex-col flex-1 justify-between space-y-3">
+                    <div className="space-y-2">
+                      <h4 className="font-bold text-foreground text-base group-hover:text-primary transition-colors line-clamp-1">
+                        {project.title}
+                      </h4>
+                      <p className="text-muted-foreground text-xs leading-relaxed line-clamp-2">
+                        {project.description}
+                      </p>
+
+                      {/* Tech Badges */}
+                      <div className="flex flex-wrap gap-1 pt-1">
+                        {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                          <span
+                            key={techIndex}
+                            className="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-medium rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                        {project.technologies.length > 3 && (
+                          <span className="px-1.5 py-0.5 bg-muted text-muted-foreground text-[10px] font-medium rounded-full">
+                            +{project.technologies.length - 3}
+                          </span>
+                        )}
+                      </div>
+                    </div>
+
+                    <div className="pt-1">
+                      <Button
+                        variant="default"
+                        size="sm"
+                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all font-semibold text-xs h-8 gap-1.5 shadow-sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          window.open(project.url, '_blank');
+                        }}
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                        Live Demo
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
-        {/* Project Stats */}
-        <div className="mt-10 sm:mt-16">
-          <Card className="glass-card">
-            <CardContent className="p-4 sm:p-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">50+</div>
-                  <div className="text-muted-foreground">Active Projects</div>
+        {/* Project Stats Banner */}
+        <div className="mt-12 sm:mt-16">
+          <Card className="glass-card border border-border/80 shadow-md">
+            <CardContent className="p-6 sm:p-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">50+</div>
+                  <div className="text-muted-foreground text-xs sm:text-sm font-medium">
+                    Active Platforms & Tools
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">500K+</div>
-                  <div className="text-muted-foreground">Lines of Code</div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">500K+</div>
+                  <div className="text-muted-foreground text-xs sm:text-sm font-medium">
+                    Lines of Code
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">15+</div>
-                  <div className="text-muted-foreground">Technologies Used</div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">15+</div>
+                  <div className="text-muted-foreground text-xs sm:text-sm font-medium">
+                    Modern Tech Frameworks
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gradient mb-2">100%</div>
-                  <div className="text-muted-foreground">Client Satisfaction</div>
+                <div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">100%</div>
+                  <div className="text-muted-foreground text-xs sm:text-sm font-medium">
+                    Client Satisfaction
+                  </div>
                 </div>
               </div>
             </CardContent>
