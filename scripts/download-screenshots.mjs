@@ -60,6 +60,7 @@ const sites = [
   { slug: 'elshaddaiwoods', title: 'El Shaddai Woods', url: 'https://elshaddaiwoods.netlify.app/' },
 
   // Freelance Professional Portfolio
+  { slug: 'rushmitha', title: 'Rushmitha Varshini', url: 'https://rushmitha.netlify.app/' },
   { slug: 'priyadesigner', title: 'Priya Designer', url: 'https://priya-designer.netlify.app/' },
   { slug: 'enscraftstu', title: 'EnsCraft Studio', url: 'https://enscraft-stu.netlify.app/' },
   { slug: 'growthenginestudio', title: 'Growth Engine', url: 'https://growth-engine-studio.netlify.app/' },

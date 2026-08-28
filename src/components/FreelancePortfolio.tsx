@@ -36,6 +36,7 @@ const FreelancePortfolio = () => {
   ];
 
   const professionalProjects: PortfolioItem[] = [
+    { title: 'Rushmitha Varshini', industry: 'Designing Engineer & UI/UX', url: 'https://rushmitha.netlify.app/', image: '/screenshots/rushmitha.webp', color: 'from-purple-600 to-indigo-600' },
     { title: 'Priya Designer', industry: 'Graphic Designer', url: 'https://priya-designer.netlify.app/', image: '/screenshots/priyadesigner.webp', color: 'from-pink-500 to-purple-600' },
     { title: 'EnsCraft Studio', industry: 'Creative Studio', url: 'https://enscraft-stu.netlify.app/', image: '/screenshots/enscraftstu.webp', color: 'from-indigo-500 to-blue-600' },
     { title: 'Growth Engine', industry: 'Business Consultant', url: 'https://growth-engine-studio.netlify.app/', image: '/screenshots/growthenginestudio.webp', color: 'from-green-500 to-teal-600' },
