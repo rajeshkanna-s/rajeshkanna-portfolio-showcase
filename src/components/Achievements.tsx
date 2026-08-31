@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Award } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Award, FileText } from 'lucide-react';
 
 const Certificates = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,7 +7,12 @@ const Certificates = () => {
   const trackRef = useRef<HTMLDivElement>(null);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const certificates = [
+  const certificates: Array<{ title: string; url: string; pdfUrl?: string }> = [
+    {
+      title: 'be10x — AI Tools & Claude Workshop Certification',
+      url: '/be10xCertificate.webp',
+      pdfUrl: '/be10xCertificatex.pdf'
+    },
     {
       title: 'Building High Performance Teams',
       url: 'https://my--files.s3.us-east-1.amazonaws.com/%23CERTIFICATE/CertificateOfCompletion_Building+HighPerformance+Teams-1.jpg'
@@ -153,10 +158,21 @@ const Certificates = () => {
                     loading="lazy"
                   />
                   {/* Title overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent px-6 pb-5 pt-14">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent px-6 pb-5 pt-14 flex items-end justify-between gap-4">
                     <h3 className="text-white text-base sm:text-lg md:text-xl font-semibold drop-shadow-md">
                       {cert.title}
                     </h3>
+                    {cert.pdfUrl && (
+                      <a
+                        href={cert.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-md transition-all duration-200 hover:scale-105 shrink-0"
+                      >
+                        <FileText className="w-3.5 h-3.5" />
+                        <span>View PDF</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               ))}
