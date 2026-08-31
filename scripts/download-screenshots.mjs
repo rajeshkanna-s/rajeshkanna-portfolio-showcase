@@ -61,6 +61,9 @@ const sites = [
 
   // Freelance Professional Portfolio
   { slug: 'rushmitha', title: 'Rushmitha Varshini', url: 'https://rushmitha.netlify.app/' },
+  { slug: 'keerthanag', title: 'Keerthana G', url: 'https://keerthanag.netlify.app/' },
+  { slug: 'miar', title: 'Mia Developer', url: 'https://mia-r.netlify.app/' },
+  { slug: 'keerthana-g', title: 'Keerthana G (Interactive)', url: 'https://keerthana-g.netlify.app/' },
   { slug: 'priyadesigner', title: 'Priya Designer', url: 'https://priya-designer.netlify.app/' },
   { slug: 'enscraftstu', title: 'EnsCraft Studio', url: 'https://enscraft-stu.netlify.app/' },
   { slug: 'growthenginestudio', title: 'Growth Engine', url: 'https://growth-engine-studio.netlify.app/' },

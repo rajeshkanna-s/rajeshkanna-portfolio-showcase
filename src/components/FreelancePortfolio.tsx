@@ -37,6 +37,9 @@ const FreelancePortfolio = () => {
 
   const professionalProjects: PortfolioItem[] = [
     { title: 'Rushmitha Varshini', industry: 'Designing Engineer & UI/UX', url: 'https://rushmitha.netlify.app/', image: '/screenshots/rushmitha.webp', color: 'from-purple-600 to-indigo-600' },
+    { title: 'Keerthana G', industry: 'HR & Talent Acquisition', url: 'https://keerthanag.netlify.app/', image: '/screenshots/keerthanag.webp', color: 'from-purple-600 to-amber-500' },
+    { title: 'Mia Developer', industry: 'Full Stack Developer', url: 'https://mia-r.netlify.app/', image: '/screenshots/miar.webp', color: 'from-violet-500 to-rose-500' },
+    { title: 'Keerthana G (Interactive)', industry: 'Talent Acquisition Specialist', url: 'https://keerthana-g.netlify.app/', image: '/screenshots/keerthana-g.webp', color: 'from-fuchsia-600 to-purple-800' },
     { title: 'Priya Designer', industry: 'Graphic Designer', url: 'https://priya-designer.netlify.app/', image: '/screenshots/priyadesigner.webp', color: 'from-pink-500 to-purple-600' },
     { title: 'EnsCraft Studio', industry: 'Creative Studio', url: 'https://enscraft-stu.netlify.app/', image: '/screenshots/enscraftstu.webp', color: 'from-indigo-500 to-blue-600' },
     { title: 'Growth Engine', industry: 'Business Consultant', url: 'https://growth-engine-studio.netlify.app/', image: '/screenshots/growthenginestudio.webp', color: 'from-green-500 to-teal-600' },
