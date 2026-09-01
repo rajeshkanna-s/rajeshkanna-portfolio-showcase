@@ -42,6 +42,8 @@ const sites = [
   { slug: 'aiapiss', title: 'AI APIs Explorer', url: 'https://aiapiss.netlify.app/' },
 
   // Freelance Business Portfolio
+  { slug: 'rasmia', title: 'RasMia', url: 'https://rasmia.netlify.app/' },
+  { slug: 'tastetableshowcase', title: 'Taste & Table Showcase', url: 'https://rajeshkanna-s.github.io/taste-and-table-showcase/' },
   { slug: 'tastetable', title: 'Taste & Table', url: 'https://tastetable.netlify.app/' },
   { slug: 'lexco', title: 'Lex & Co', url: 'https://lex-co.netlify.app/' },
   { slug: 'brightsmilo', title: 'BrightSmilo', url: 'https://brightsmilo.netlify.app/' },
@@ -60,6 +62,11 @@ const sites = [
   { slug: 'elshaddaiwoods', title: 'El Shaddai Woods', url: 'https://elshaddaiwoods.netlify.app/' },
 
   // Freelance Professional Portfolio
+  { slug: 'alenportfolio', title: 'Alen Portfolio', url: 'https://rajeshkanna-s.github.io/alen-portfolio-website/' },
+  { slug: 'netflixportfolio', title: 'Netflix Developer Portfolio', url: 'https://rajeshkanna-s.github.io/netflix-developer-portfolio/' },
+  { slug: 'portfolioadv3d', title: 'Advanced 3D Portfolio', url: 'https://rajeshkanna-s.github.io/portfolio-adv-3d/' },
+  { slug: 'videodeveloper', title: 'Video Developer Portfolio', url: 'https://rajeshkanna-s.github.io/video-developer-portfolio/' },
+  { slug: 'portfolioadvancedpro', title: 'Advanced Pro Portfolio', url: 'https://rajeshkanna-s.github.io/portfolio-advanced-pro/' },
   { slug: 'rushmitha', title: 'Rushmitha Varshini', url: 'https://rushmitha.netlify.app/' },
   { slug: 'keerthanag', title: 'Keerthana G', url: 'https://keerthanag.netlify.app/' },
   { slug: 'miar', title: 'Mia Developer', url: 'https://mia-r.netlify.app/' },

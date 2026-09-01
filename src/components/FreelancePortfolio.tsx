@@ -17,6 +17,8 @@ interface PortfolioItem {
 
 const FreelancePortfolio = () => {
   const businessProjects: PortfolioItem[] = [
+    { title: 'RasMia', industry: 'Artisan High-Protein Bars', url: 'https://rasmia.netlify.app/', image: '/screenshots/rasmia.webp', color: 'from-amber-600 to-lime-600' },
+    { title: 'Taste & Table Showcase', industry: 'Gourmet Dining Showcase', url: 'https://rajeshkanna-s.github.io/taste-and-table-showcase/', image: '/screenshots/tastetableshowcase.webp', color: 'from-red-600 to-amber-500' },
     { title: 'Taste & Table', industry: 'Café & Restaurant', url: 'https://tastetable.netlify.app/', image: '/screenshots/tastetable.webp', color: 'from-orange-500 to-red-500' },
     { title: 'Lex & Co', industry: 'Law Firm', url: 'https://lex-co.netlify.app/', image: '/screenshots/lexco.webp', color: 'from-slate-600 to-slate-800' },
     { title: 'BrightSmilo', industry: 'Dental Clinic', url: 'https://brightsmilo.netlify.app/', image: '/screenshots/brightsmilo.webp', color: 'from-cyan-500 to-blue-600' },
@@ -36,6 +38,11 @@ const FreelancePortfolio = () => {
   ];
 
   const professionalProjects: PortfolioItem[] = [
+    { title: 'Alen Portfolio', industry: 'Senior Full Stack Engineer', url: 'https://rajeshkanna-s.github.io/alen-portfolio-website/', image: '/screenshots/alenportfolio.webp', color: 'from-cyan-600 to-blue-600' },
+    { title: 'Netflix Developer Portfolio', industry: 'Cinematic Developer Portfolio', url: 'https://rajeshkanna-s.github.io/netflix-developer-portfolio/', image: '/screenshots/netflixportfolio.webp', color: 'from-red-600 to-rose-700' },
+    { title: 'Advanced 3D Portfolio', industry: 'Interactive 3D Web Systems', url: 'https://rajeshkanna-s.github.io/portfolio-adv-3d/', image: '/screenshots/portfolioadv3d.webp', color: 'from-blue-600 to-indigo-700' },
+    { title: 'Video Developer Portfolio', industry: 'Interactive Media & Video', url: 'https://rajeshkanna-s.github.io/video-developer-portfolio/', image: '/screenshots/videodeveloper.webp', color: 'from-cyan-500 to-teal-700' },
+    { title: 'Advanced Pro Portfolio', industry: 'Software Architect & Systems', url: 'https://rajeshkanna-s.github.io/portfolio-advanced-pro/', image: '/screenshots/portfolioadvancedpro.webp', color: 'from-indigo-600 to-violet-700' },
     { title: 'Rushmitha Varshini', industry: 'Designing Engineer & UI/UX', url: 'https://rushmitha.netlify.app/', image: '/screenshots/rushmitha.webp', color: 'from-purple-600 to-indigo-600' },
     { title: 'Keerthana G', industry: 'HR & Talent Acquisition', url: 'https://keerthanag.netlify.app/', image: '/screenshots/keerthanag.webp', color: 'from-purple-600 to-amber-500' },
     { title: 'Mia Developer', industry: 'Full Stack Developer', url: 'https://mia-r.netlify.app/', image: '/screenshots/miar.webp', color: 'from-violet-500 to-rose-500' },
@@ -175,7 +182,7 @@ const FreelancePortfolio = () => {
             Websites I've Built for Clients
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            30+ premium websites delivered to businesses and professionals across India
+            38+ premium websites delivered to businesses and professionals across India
           </p>
         </div>
 
@@ -230,7 +237,7 @@ const FreelancePortfolio = () => {
             <CardContent className="p-6 sm:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">30+</div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">38+</div>
                   <div className="text-muted-foreground text-xs sm:text-sm font-medium">Websites Delivered</div>
                 </div>
                 <div>
