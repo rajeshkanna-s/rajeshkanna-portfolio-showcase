@@ -42,6 +42,8 @@ const sites = [
   { slug: 'aiapiss', title: 'AI APIs Explorer', url: 'https://aiapiss.netlify.app/' },
 
   // Freelance Business Portfolio
+  { slug: 'comportfolio', title: 'Atelier Bloom', url: 'https://com-portfolio.netlify.app/' },
+  { slug: 'comportfolio2', title: 'Aquila Glide', url: 'https://com-portfolio-2.netlify.app/' },
   { slug: 'rasmia', title: 'RasMia', url: 'https://rasmia.netlify.app/' },
   { slug: 'tastetableshowcase', title: 'Taste & Table Showcase', url: 'https://rajeshkanna-s.github.io/taste-and-table-showcase/' },
   { slug: 'tastetable', title: 'Taste & Table', url: 'https://tastetable.netlify.app/' },

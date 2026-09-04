@@ -17,6 +17,8 @@ interface PortfolioItem {
 
 const FreelancePortfolio = () => {
   const businessProjects: PortfolioItem[] = [
+    { title: 'Atelier Bloom', industry: 'Botanical Studio & Floral Design', url: 'https://com-portfolio.netlify.app/', image: '/screenshots/comportfolio.webp', color: 'from-emerald-600 to-teal-700' },
+    { title: 'Aquila Glide', industry: 'Electric Mobility & EV', url: 'https://com-portfolio-2.netlify.app/', image: '/screenshots/comportfolio2.webp', color: 'from-zinc-800 to-amber-600' },
     { title: 'RasMia', industry: 'Artisan High-Protein Bars', url: 'https://rasmia.netlify.app/', image: '/screenshots/rasmia.webp', color: 'from-amber-600 to-lime-600' },
     { title: 'Taste & Table Showcase', industry: 'Gourmet Dining Showcase', url: 'https://rajeshkanna-s.github.io/taste-and-table-showcase/', image: '/screenshots/tastetableshowcase.webp', color: 'from-red-600 to-amber-500' },
     { title: 'Taste & Table', industry: 'Café & Restaurant', url: 'https://tastetable.netlify.app/', image: '/screenshots/tastetable.webp', color: 'from-orange-500 to-red-500' },
@@ -182,7 +184,7 @@ const FreelancePortfolio = () => {
             Websites I've Built for Clients
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            38+ premium websites delivered to businesses and professionals across India
+            40+ premium websites delivered to businesses and professionals across India
           </p>
         </div>
 
@@ -237,7 +239,7 @@ const FreelancePortfolio = () => {
             <CardContent className="p-6 sm:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">38+</div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">40+</div>
                   <div className="text-muted-foreground text-xs sm:text-sm font-medium">Websites Delivered</div>
                 </div>
                 <div>
