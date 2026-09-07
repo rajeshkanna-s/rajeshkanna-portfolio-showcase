@@ -13,7 +13,7 @@
 
 > *"I help founders, professionals, and small businesses create stunning online portfolios & websites that bring more clients, more trust, and more visibility."*
 
-**8+ Years Experience** &bull; **30+ Websites Delivered** &bull; **100% Client Satisfaction**
+**8+ Years Experience** &bull; **55+ Websites Delivered** &bull; **100% Client Satisfaction**
 
 ---
 
@@ -106,7 +106,7 @@ src/
 │   ├── Services.tsx            # 9 service offerings grid
 │   ├── HowIWork.tsx            # 8-step process visualization
 │   ├── WhyChooseMe.tsx         # 8 value propositions
-│   ├── FreelancePortfolio.tsx  # 30+ client projects showcase
+│   ├── FreelancePortfolio.tsx  # 55+ client projects showcase
 │   ├── Experience.tsx          # Professional timeline
 │   ├── Skills.tsx              # 80+ skills across 5 categories
 │   ├── TopStrengths.tsx        # 5 core competencies
@@ -177,7 +177,7 @@ npm run preview
 | 3 | **Services** | 9 freelance offerings with gradient cards |
 | 4 | **How I Work** | 8-step transparent process from discussion to support |
 | 5 | **Why Choose Me** | 8 competitive advantages with detailed benefits |
-| 6 | **Freelance Portfolio** | 30+ live client websites across 3 categories |
+| 6 | **Freelance Portfolio** | 55+ live client websites across 3 categories |
 | 7 | **Experience** | Professional roles at Kuwy Technology & Barclays |
 | 8 | **Skills** | 80+ technologies across Backend, Frontend, DB, Cloud, Tools |
 | 9 | **AI Tools** | 20+ AI tools — development, creative, and platforms |

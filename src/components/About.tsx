@@ -65,7 +65,7 @@ const About = () => {
               </p>
 
               <p>
-                I've built <span className="font-semibold text-secondary">30+ websites</span> for businesses
+                I've built <span className="font-semibold text-secondary">55+ websites</span> for businesses
                 & professionals across India. Whether you need a stunning portfolio, a business website,
                 or a custom web application — I deliver premium results at affordable prices.
               </p>
@@ -78,7 +78,7 @@ const About = () => {
                 <div className="text-muted-foreground text-sm">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gradient">30+</div>
+                <div className="text-3xl font-bold text-gradient">55+</div>
                 <div className="text-muted-foreground text-sm">Websites Built</div>
               </div>
               <div className="text-center">

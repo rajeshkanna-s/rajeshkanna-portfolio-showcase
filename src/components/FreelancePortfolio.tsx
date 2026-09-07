@@ -17,6 +17,23 @@ interface PortfolioItem {
 
 const FreelancePortfolio = () => {
   const businessProjects: PortfolioItem[] = [
+    { title: 'Web Roast', industry: 'Specialty Coffee & Roastery', url: 'https://rajeshkanna-s.github.io/web-roast/', image: '/screenshots/webroast.webp', color: 'from-amber-700 to-orange-600' },
+    { title: 'Pulseform Fitness', industry: 'Connected Kinetics & Performance', url: 'https://rajeshkanna-s.github.io/pulseform-fitness/', image: '/screenshots/pulseform.webp', color: 'from-orange-600 to-red-600' },
+    { title: 'Velora Chocolate', industry: 'Artisanal Chocolate & Confectionery', url: 'https://rajeshkanna-s.github.io/velora-chocolate/', image: '/screenshots/velorachocolate.webp', color: 'from-amber-900 to-yellow-800' },
+    { title: 'Solara Atelier', industry: 'Haute Couture & Timepieces', url: 'https://rajeshkanna-s.github.io/solara-atelier/', image: '/screenshots/solaraatelier.webp', color: 'from-amber-600 to-yellow-700' },
+    { title: 'Aurelia Luxury Estates', industry: 'Curated Global Luxury Properties', url: 'https://rajeshkanna-s.github.io/aurelia-luxury-estates/', image: '/screenshots/aurelialuxury.webp', color: 'from-emerald-700 to-teal-800' },
+    { title: 'Tidal Veil Skincare', industry: 'Marine Hydration & Mineral Skincare', url: 'https://rajeshkanna-s.github.io/tidal-veil-skincare/', image: '/screenshots/tidalveil.webp', color: 'from-cyan-600 to-blue-700' },
+    { title: 'Rootsole Footwear', industry: 'Conscious Sustainable Footwear', url: 'https://rajeshkanna-s.github.io/rootsole-footwear/', image: '/screenshots/rootsole.webp', color: 'from-emerald-600 to-stone-700' },
+    { title: 'Kinroot Fitness', industry: 'Adaptive Science-Backed Training', url: 'https://rajeshkanna-s.github.io/kinroot-fitness/', image: '/screenshots/kinroot.webp', color: 'from-lime-600 to-emerald-700' },
+    { title: 'Aura Noir Perfume', industry: 'Luxury Fragrance & Perfumery', url: 'https://rajeshkanna-s.github.io/aura-noir-perfume/', image: '/screenshots/auranoir.webp', color: 'from-purple-800 to-indigo-950' },
+    { title: 'Nocturne Dining', industry: 'Woodfire Gastronomy & Dining', url: 'https://rajeshkanna-s.github.io/nocturne-dining/', image: '/screenshots/nocturnedining.webp', color: 'from-neutral-800 to-amber-900' },
+    { title: 'Gusto Italian', industry: 'Authentic Italian Osteria', url: 'https://rajeshkanna-s.github.io/gusto-italian/', image: '/screenshots/gustoitalian.webp', color: 'from-red-600 to-amber-600' },
+    { title: 'Nova Sneakers', industry: 'Engineered Techwear Sneakers', url: 'https://rajeshkanna-s.github.io/nova-sneakers/', image: '/screenshots/novasneakers.webp', color: 'from-blue-600 to-violet-700' },
+    { title: 'Maison Braise', industry: 'Fire Dining & French Gastronomy', url: 'https://rajeshkanna-s.github.io/maison-braise/', image: '/screenshots/maisonbraise.webp', color: 'from-orange-700 to-rose-900' },
+    { title: 'Ember Restaurant', industry: 'Artisan Grill & Smokehouse', url: 'https://rajeshkanna-s.github.io/ember-restaurant/', image: '/screenshots/emberrestaurant.webp', color: 'from-red-700 to-amber-700' },
+    { title: 'Soluna Cove Resort', industry: 'Luxury Coastal Sanctuary & Spa', url: 'https://rajeshkanna-s.github.io/soluna-cove-resort/', image: '/screenshots/solunacove.webp', color: 'from-teal-600 to-cyan-700' },
+    { title: 'Aurelia Developments', industry: 'Modern Architectural Living', url: 'https://rajeshkanna-s.github.io/aurelia-developments/', image: '/screenshots/aureliadevelopments.webp', color: 'from-slate-700 to-zinc-900' },
+    { title: 'Mira Vale Studio', industry: 'Creative Visual & Brand Studio', url: 'https://rajeshkanna-s.github.io/mira-vale-studio/', image: '/screenshots/miravale.webp', color: 'from-stone-600 to-neutral-800' },
     { title: 'Atelier Bloom', industry: 'Botanical Studio & Floral Design', url: 'https://com-portfolio.netlify.app/', image: '/screenshots/comportfolio.webp', color: 'from-emerald-600 to-teal-700' },
     { title: 'Aquila Glide', industry: 'Electric Mobility & EV', url: 'https://com-portfolio-2.netlify.app/', image: '/screenshots/comportfolio2.webp', color: 'from-zinc-800 to-amber-600' },
     { title: 'RasMia', industry: 'Artisan High-Protein Bars', url: 'https://rasmia.netlify.app/', image: '/screenshots/rasmia.webp', color: 'from-amber-600 to-lime-600' },
@@ -184,7 +201,7 @@ const FreelancePortfolio = () => {
             Websites I've Built for Clients
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            40+ premium websites delivered to businesses and professionals across India
+            55+ premium websites delivered to businesses and professionals across India
           </p>
         </div>
 
@@ -239,11 +256,11 @@ const FreelancePortfolio = () => {
             <CardContent className="p-6 sm:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">40+</div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">55+</div>
                   <div className="text-muted-foreground text-xs sm:text-sm font-medium">Websites Delivered</div>
                 </div>
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">15+</div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">20+</div>
                   <div className="text-muted-foreground text-xs sm:text-sm font-medium">Industries Covered</div>
                 </div>
                 <div>
