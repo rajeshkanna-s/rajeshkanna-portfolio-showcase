@@ -36,7 +36,7 @@ const FreelancePortfolio = () => {
     { title: 'Mira Vale Studio', industry: 'Creative Visual & Brand Studio', url: 'https://rajeshkanna-s.github.io/mira-vale-studio/', image: '/screenshots/miravale.webp', color: 'from-stone-600 to-neutral-800' },
     { title: 'Atelier Bloom', industry: 'Botanical Studio & Floral Design', url: 'https://com-portfolio.netlify.app/', image: '/screenshots/comportfolio.webp', color: 'from-emerald-600 to-teal-700' },
     { title: 'Aquila Glide', industry: 'Electric Mobility & EV', url: 'https://com-portfolio-2.netlify.app/', image: '/screenshots/comportfolio2.webp', color: 'from-zinc-800 to-amber-600' },
-    { title: 'RasMia', industry: 'Artisan High-Protein Bars', url: 'https://rasmia.netlify.app/', image: '/screenshots/rasmia.webp', color: 'from-amber-600 to-lime-600' },
+    { title: 'RASMIA R1', industry: '3D Camera & Optical Engineering', url: 'https://rajeshkanna-s.github.io/rasmia/', image: '/screenshots/rasmia.webp', color: 'from-amber-600 to-yellow-700' },
     { title: 'Taste & Table Showcase', industry: 'Gourmet Dining Showcase', url: 'https://rajeshkanna-s.github.io/taste-and-table-showcase/', image: '/screenshots/tastetableshowcase.webp', color: 'from-red-600 to-amber-500' },
     { title: 'Taste & Table', industry: 'Café & Restaurant', url: 'https://tastetable.netlify.app/', image: '/screenshots/tastetable.webp', color: 'from-orange-500 to-red-500' },
     { title: 'Lex & Co', industry: 'Law Firm', url: 'https://lex-co.netlify.app/', image: '/screenshots/lexco.webp', color: 'from-slate-600 to-slate-800' },
