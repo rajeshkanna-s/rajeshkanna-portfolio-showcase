@@ -42,6 +42,9 @@ const sites = [
   { slug: 'aiapiss', title: 'AI APIs Explorer', url: 'https://aiapiss.netlify.app/' },
 
   // Freelance Business Portfolio
+  { slug: 'atelierhero', title: 'Atelier Hero', url: 'https://rajeshkanna-s.github.io/atelier-hero/' },
+  { slug: 'vibrantwellness', title: 'Vibrant Wellness', url: 'https://rajeshkanna-s.github.io/vibrant-wellness/' },
+  { slug: 'microvisuals', title: 'MicroVisuals', url: 'https://rajeshkanna-s.github.io/microvisuals/' },
   { slug: 'webroast', title: 'Web Roast', url: 'https://rajeshkanna-s.github.io/web-roast/' },
   { slug: 'pulseform', title: 'Pulseform Fitness', url: 'https://rajeshkanna-s.github.io/pulseform-fitness/' },
   { slug: 'velorachocolate', title: 'Velora Chocolate', url: 'https://rajeshkanna-s.github.io/velora-chocolate/' },

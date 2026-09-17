@@ -17,6 +17,9 @@ interface PortfolioItem {
 
 const FreelancePortfolio = () => {
   const businessProjects: PortfolioItem[] = [
+    { title: 'Atelier UX/App', industry: 'Digital Product Design & Ventures', url: 'https://rajeshkanna-s.github.io/atelier-hero/', image: '/screenshots/atelierhero.webp', color: 'from-blue-700 to-indigo-900' },
+    { title: 'Vibrant Wellness', industry: 'Holistic Sanctuary & Natural Healing', url: 'https://rajeshkanna-s.github.io/vibrant-wellness/', image: '/screenshots/vibrantwellness.webp', color: 'from-emerald-700 to-teal-800' },
+    { title: 'MicroVisuals', industry: 'Neural Visual Studio & AI Generation', url: 'https://rajeshkanna-s.github.io/microvisuals/', image: '/screenshots/microvisuals.webp', color: 'from-purple-800 to-indigo-950' },
     { title: 'Web Roast', industry: 'Specialty Coffee & Roastery', url: 'https://rajeshkanna-s.github.io/web-roast/', image: '/screenshots/webroast.webp', color: 'from-amber-700 to-orange-600' },
     { title: 'Pulseform Fitness', industry: 'Connected Kinetics & Performance', url: 'https://rajeshkanna-s.github.io/pulseform-fitness/', image: '/screenshots/pulseform.webp', color: 'from-orange-600 to-red-600' },
     { title: 'Velora Chocolate', industry: 'Artisanal Chocolate & Confectionery', url: 'https://rajeshkanna-s.github.io/velora-chocolate/', image: '/screenshots/velorachocolate.webp', color: 'from-amber-900 to-yellow-800' },
@@ -202,7 +205,7 @@ const FreelancePortfolio = () => {
             Websites I've Built for Clients
           </h2>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
-            55+ premium websites delivered to businesses and professionals across India
+            60+ premium websites delivered to businesses and professionals across India
           </p>
         </div>
 
@@ -257,7 +260,7 @@ const FreelancePortfolio = () => {
             <CardContent className="p-6 sm:p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div>
-                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">55+</div>
+                  <div className="text-3xl sm:text-4xl font-extrabold text-gradient mb-1">60+</div>
                   <div className="text-muted-foreground text-xs sm:text-sm font-medium">Websites Delivered</div>
                 </div>
                 <div>
