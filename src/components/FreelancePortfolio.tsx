@@ -17,6 +17,7 @@ interface PortfolioItem {
 
 const FreelancePortfolio = () => {
   const businessProjects: PortfolioItem[] = [
+    { title: 'MORI Matcha', industry: 'Ceremonial Matcha & Tea Ritual', url: 'https://rajeshkanna-s.github.io/mori-matcha/', image: '/screenshots/morimatcha.webp', color: 'from-emerald-800 to-stone-900' },
     { title: 'Atelier UX/App', industry: 'Digital Product Design & Ventures', url: 'https://rajeshkanna-s.github.io/atelier-hero/', image: '/screenshots/atelierhero.webp', color: 'from-blue-700 to-indigo-900' },
     { title: 'Vibrant Wellness', industry: 'Holistic Sanctuary & Natural Healing', url: 'https://rajeshkanna-s.github.io/vibrant-wellness/', image: '/screenshots/vibrantwellness.webp', color: 'from-emerald-700 to-teal-800' },
     { title: 'MicroVisuals', industry: 'Neural Visual Studio & AI Generation', url: 'https://rajeshkanna-s.github.io/microvisuals/', image: '/screenshots/microvisuals.webp', color: 'from-purple-800 to-indigo-950' },

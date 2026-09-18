@@ -42,6 +42,7 @@ const sites = [
   { slug: 'aiapiss', title: 'AI APIs Explorer', url: 'https://aiapiss.netlify.app/' },
 
   // Freelance Business Portfolio
+  { slug: 'morimatcha', title: 'MORI Matcha', url: 'https://rajeshkanna-s.github.io/mori-matcha/' },
   { slug: 'atelierhero', title: 'Atelier Hero', url: 'https://rajeshkanna-s.github.io/atelier-hero/' },
   { slug: 'vibrantwellness', title: 'Vibrant Wellness', url: 'https://rajeshkanna-s.github.io/vibrant-wellness/' },
   { slug: 'microvisuals', title: 'MicroVisuals', url: 'https://rajeshkanna-s.github.io/microvisuals/' },
